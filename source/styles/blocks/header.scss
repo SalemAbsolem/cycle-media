@@ -1,0 +1,36 @@
+// .header {
+
+// }
+
+.header__menu {
+  position: absolute;
+  inset: 0;
+  z-index: 50;
+
+  display: none;
+  padding: 20px;
+
+  background-color: rgba($black, 0.6);
+
+  backdrop-filter: blur(15px);
+
+  &.header__menu--is-open {
+    display: block;
+  }
+}
+
+// .header__page-menu {
+
+// }
+
+// .header__site-navigation {
+
+// }
+
+.header__form-button {
+  margin: auto auto 5.46vh;
+}
+
+// .header__contacts-social {
+
+// }

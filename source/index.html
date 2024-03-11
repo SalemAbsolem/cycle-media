@@ -2,27 +2,464 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>CycleMedia | ГЛАВНАЯ</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- Заголовок страниц: 50-57 для Google / 65-70 для Яндекс - вместе с пробелами -->
+    <title>CYCLE MEDIA | ГЛАВНАЯ</title>
+    <!-- Фавиконки -->
     <!-- <link rel="icon" href="favicon.ico"> -->
     <!-- <link rel="icon" href="favicons/icon.svg" type="image/svg+xml"> -->
     <!-- <link rel="apple-touch-icon" href="favicons/apple.png"> -->
     <!-- <link rel="manifest" href="manifest.webmanifest"> -->
-    <!-- <link rel="preload" href="fonts/lato/Lato-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous"> -->
+    <!-- Описание и ключевые слова -->
+    <!-- Длина описания до 150 символов вместе с пробелами -->
+    <meta name="description" content="Главная страница меркетингового агентства Cycle Media">
+    <!-- Ниже ключевые слова. Статья для SEO-тегов https://beseller.by/blog/kak-pravilno-formirovat-seo-tegi-dliya-internet-magazina/-->
+    <meta name="keywords" content="маркетнинг, реклама, продвижение">
+    <!-- каноничная ссылка -->
+    <!-- <link rel="canonical" href="https://example.com/"> -->
+    <!-- разрешения для поисковых роботов -->
+    <meta name="robots" content="index, follow, archive">
+    <!-- Разметка OpenGraph -->
+    <!-- <meta property="og:type" content="website">
+    <meta property="og:title" content="Заголовок">
+    <meta property="og:description" content="Описание">
+    <meta property="og:url" content="адрес страницы">
+    <meta property="og:image" content="адрес картинки"> -->
+    <!-- тип картинки -->
+    <!-- <meta property="og:image:type" content="image/jpeg"> -->
+    <!-- размеры картинки -->
+    <!-- <meta property="og:image:width" content="400">
+    <meta property="og:image:height" content="300">
+    <meta property="og:site_name" content="Cycle Media (название организации)"> -->
+    <!-- язык на странице -->
+    <!-- <meta property="og:locale" content="ru_RU"> -->
+    <!-- Добавить еще микроразметку Schema.org -->
+    <!-- Предзагрузка шрифтов -->
+    <link rel="preload" href="fonts/next-art/next-art-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/next-art/next-art-semibold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/tt-wellingtons/tt-wellingtons-demibold-italic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <!-- Таблицы стилей -->
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-  <body class="page__body">
-    <header class="header">
-
+  <body class="page__body body">
+    <header class="body__header header">
+      <div class="header__page-menu page-menu">
+        <!-- если страница главная, то убрать href и aria-current page -->
+        <a class="page-menu__link" href="#" aria-current="page">
+          <span class="visually-hidden">
+            Перейти на главную страницу.
+          </span>
+          <svg class="page-menu__link-image" width="93" height="15" aria-hidden="true" focusable="false">
+            <use href="images/icons/stack.svg#cycle-media-logo"></use>
+          </svg>
+        </a>
+        <button class="page-menu__button button button--toogle-menu" type="button">
+          <span class="button__text">
+            Меню?
+          </span>
+        </button>
+        <p class="page-menu__scroll">
+          {scroll
+            <span class="page-menu__scroll-percent">
+              0
+            </span>
+          %}
+        </p>
+        <p class="page-menu__time">
+          { spb
+            <span class="page-menu__time-spb">
+              14:36
+            </span>
+          }
+        </p>
+        <!-- если js работать на будет то отправить на отдельную страницу с формой !!!ПОПАП С ФОРМОЙ ПРОСТОЙ!!! -->
+        <a class="page-menu__form-button button button--open-form" href="#">
+          хочу вас
+        </a>
+      </div>
+      <!-- класс для открытия меню header__menu--is-open -->
+      <div class="header__menu">
+        <nav class="header__site-navigation site-navigation">
+          <ul class="site-navigation__list">
+            <li class="site-navigation__item">
+              <!-- к текущей странице добавить класс site-navigation__link--current и aria-current page -->
+              <a class="site-navigation__link site-navigation__link--current" href="#" aria-current="page">
+                главная
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <!-- к текущей странице добавить класс site-navigation__link--current и aria-current page -->
+              <a class="site-navigation__link" href="#">
+                О нас
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <!-- к текущей странице добавить класс site-navigation__link--current и aria-current page -->
+              <a class="site-navigation__link" href="#">
+                Работы
+              </a>
+            </li>
+            <li class="site-navigation__item">
+              <!-- к текущей странице добавить класс site-navigation__link--current и aria-current page -->
+              <a class="site-navigation__link" href="#">
+                Услуги
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- если js работать на будет то отправить на отдельную страницу с формой !!!ЭТО КВИЗ!!! -->
+        <a class="header__form-button button button--open-quiz" href="#">
+          узнать стоимость
+        </a>
+        <div class="header__contacts-social contacts-social">
+          <ul class="contacts-social__social social">
+            <li class="social__item">
+              <a class="social__link" href="#" rel="noreferrer noopener" target="_blank">
+                ВКонтакте
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" rel="noreferrer noopener" target="_blank">
+                Behance
+              </a>
+            </li>
+            <li class="social__item">
+              <!-- добавить текст про запрещенную соц сеть? Куда? Атрибут title? -->
+              <a class="social__link" href="#" rel="noreferrer noopener" target="_blank">
+                Instagram
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#" rel="noreferrer noopener" target="_blank">
+                Telegram
+              </a>
+            </li>
+          </ul>
+          <ul class="contacts-social__contacts contacts">
+            <li class="contacts__item">
+              <a class="contacts__link" href="mailto:mcyclemedia@gmail.com" rel="noreferrer noopener" target="_blank">
+                mcyclemedia@gmail.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a class="contacts__link" href="tel:+79991358154" rel="noreferrer noopener" target="_blank">
+                +7(999)135-81-54
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
-    <main class="main">
-        <h1>
-          CycleMedia
+    <main class="body__main main">
+      <section class="main__section hero-section">
+        <h1 class="hero-section__title">
+          Cycle
+          <span class="hero-section__decorate hero-section__decorate--title"></span>
+          Media
+          <br>
+          <span class="hero-section__title-tail">
+            креативное агентство полного цикла
+          </span>
         </h1>
+        <span class="hero-section__decorate hero-section__decorate--section"></span>
+        <ul class="hero-section__adventages adventages">
+          <li class="adventages__item">
+            <h2 class="adventages__title">
+              Эффективность
+            </h2>
+            <p class="adventages__description">
+              Исследуем рынок и внедряем эффективные решения для твоего бизнеса
+            </p>
+          </li>
+          <li class="adventages__item">
+            <h2 class="adventages__title">
+              Индивидуальный подход
+            </h2>
+            <p class="adventages__description">
+              Каждый наш клиент уникален. Построим рабочие процессы так, чтобы тебе было комфортно
+            </p>
+          </li>
+          <li class="adventages__item">
+            <h2 class="adventages__title">
+              Уникальность
+            </h2>
+            <p class="adventages__description">
+              Помогаем выделиться на фоне конкурентов так, чтобы покупали именно у тебя
+            </p>
+          </li>
+        </ul>
+        <!-- если js работать на будет то отправить на отдельную страницу с формой !!!ЭТО КВИЗ!!! -->
+      <a class="hero-section__form-button button button--open-quiz" href="#">
+        узнать стоимость
+      </a>
+      </section>
+      <section class="main__section about">
+        <h2 class="about__title">
+          О нас
+        </h2>
+        <p class="about__lead">
+          Меняем реалии, в которых существует твой бизнес, воплощаяв жизнь самый смелые мечты. Никакой магии. Мы просто знаем, как работает рынок
+        </p>
+        <p class="about__description">
+          Решаем проблемы бизнеса по щелчку пальцев. Помогаем повысить узнаваемость и получить целевых клиентов. Создаем волшебные визуалы, которые радуют глаз
+        </p>
+        <!-- куда ведет? !!!на отдельную страницу!!! -->
+        <a class="about__work-button button button--work" href="#">
+          Больше о нас
+        </a>
+      </section>
+      <section class="main__section portfolio">
+        <h2 class="visually-hidden">
+          Лучше работы агентства
+        </h2>
+        <ul class="portfolio__list">
+          <li class="portfolio__item">
+            <!-- ссылка ведет на сам кейс  -->
+              <a class="portfolio__link" href="#" style="background-image: url('images/portfolio-1@2x.jpg');">
+              <h3 class="portfolio__title">
+                VYBORG BAY
+              </h3>
+              <p class="portfolio__description">
+                Глэмпинг в черте города выборг
+              </p>
+              <span class="portfolio__arrow"></span>
+              <ul class="portfolio__work-category work-category">
+                <li class="work-category__item">
+                  Логотип
+                </li>
+                <li class="work-category__item">
+                  Сайт
+                </li>
+                <li class="work-category__item">
+                  Социальные сети
+                </li>
+                <li class="work-category__item">
+                  Фирменный стиль
+                </li>
+                <li class="work-category__item">
+                  3D визуализация
+                </li>
+              </ul>
+              <span class="portfolio__count">
+                01/04
+              </span>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <!-- ссылка ведет на сам кейс  -->
+              <a class="portfolio__link" href="#" style="background-image: url('images/portfolio-1@2x.jpg');">
+              <h3 class="portfolio__title">
+                VYBORG BAY
+              </h3>
+              <p class="portfolio__description">
+                Глэмпинг в черте города выборг
+              </p>
+              <span class="portfolio__arrow"></span>
+              <ul class="portfolio__work-category work-category">
+                <li class="work-category__item">
+                  Логотип
+                </li>
+                <li class="work-category__item">
+                  Сайт
+                </li>
+                <li class="work-category__item">
+                  Социальные сети
+                </li>
+                <li class="work-category__item">
+                  Фирменный стиль
+                </li>
+                <li class="work-category__item">
+                  3D визуализация
+                </li>
+              </ul>
+              <span class="portfolio__count">
+                02/04
+              </span>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <!-- ссылка ведет на сам кейс  -->
+              <a class="portfolio__link" href="#" style="background-image: url('images/portfolio-1@2x.jpg');">
+              <h3 class="portfolio__title">
+                VYBORG BAY
+              </h3>
+              <p class="portfolio__description">
+                Глэмпинг в черте города выборг
+              </p>
+              <span class="portfolio__arrow"></span>
+              <ul class="portfolio__work-category work-category">
+                <li class="work-category__item">
+                  Логотип
+                </li>
+                <li class="work-category__item">
+                  Сайт
+                </li>
+                <li class="work-category__item">
+                  Социальные сети
+                </li>
+                <li class="work-category__item">
+                  Фирменный стиль
+                </li>
+                <li class="work-category__item">
+                  3D визуализация
+                </li>
+              </ul>
+              <span class="portfolio__count">
+                03/04
+              </span>
+            </a>
+          </li>
+          <li class="portfolio__item">
+            <!-- ссылка ведет на сам кейс  -->
+              <a class="portfolio__link" href="#" style="background-image: url('images/portfolio-1@2x.jpg');">
+              <h3 class="portfolio__title">
+                VYBORG BAY
+              </h3>
+              <p class="portfolio__description">
+                Глэмпинг в черте города выборг
+              </p>
+              <span class="portfolio__arrow"></span>
+              <ul class="portfolio__work-category work-category">
+                <li class="work-category__item">
+                  Логотип
+                </li>
+                <li class="work-category__item">
+                  Сайт
+                </li>
+                <li class="work-category__item">
+                  Социальные сети
+                </li>
+                <li class="work-category__item">
+                  Фирменный стиль
+                </li>
+                <li class="work-category__item">
+                  3D визуализация
+                </li>
+              </ul>
+              <span class="portfolio__count">
+                04/04
+              </span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="main__section services">
+        <h2 class="services__title">
+          Услуги
+        </h2>
+        <p class="services__description">
+          Выбери свою сторону силы:
+          <br>
+          дизайн или маркетинг?
+        </p>
+        <ul class="services__types types">
+          <!-- Красивые штучки, которые просто движутся и не кликаются -->
+          <li class="types__item types__item--design">
+            Фирменный стиль
+          </li>
+          <li class="types__item types__item--marketing">
+            СММ
+          </li>
+          <li class="types__item types__item--design">
+            Логотип
+          </li>
+          <li class="types__item types__item--marketing">
+            Маркетинговая стратегия
+          </li>
+          <li class="types__item types__item--design">
+            Брендинг
+          </li>
+          <li class="types__item types__item--marketing">
+            Реклама в соцсетях
+          </li>
+          <li class="types__item types__item--marketing">
+            Контекстная реклама
+          </li>
+          <li class="types__item types__item--design">
+            Дизайн соцсетей
+          </li>
+          <li class="types__item types__item--design">
+            Сайт
+          </li>
+          <li class="types__item types__item--marketing">
+            Съемка
+          </li>
+          <li class="types__item types__item--marketing">
+            Бренд - стратегия
+          </li>
+        </ul>
+        <!-- куда ведет? !!!Страница с услугами!!!-->
+        <a class="services__button button button--service" href="#">
+          подробнее об услугах
+        </a>
+      </section>
     </main>
-    <footer class="footer-main">
-
+    <footer class="main__footer footer">
+      <div class="footer__column footer__column--center">
+        <p class="footer__lead">
+          маркетинг, дизайн, съемка. сделаем, чтоб красиво было
+        </p>
+        <p class="footer__copyright">
+          2023-<span class="footer__current-date">2024</span>Cycle  media. С ЛЮБОВЬЮ ИЗ spb
+        </p>
+      </div>
+      <div class="footer__column footer__column--left">
+        <!-- если страница главная, то убрать href и aria-current page -->
+        <a class="footer__link" href="#" aria-current="page">
+          <span class="visually-hidden">
+            Перейти на главную страницу.
+          </span>
+          <svg class="footer__link-image" width="133" height="22" aria-hidden="true" focusable="false">
+            <use href="images/icons/stack.svg#cycle-media-logo"></use>
+          </svg>
+        </a>
+        <ul class="footer__contacts contacts">
+          <li class="contacts__item">
+            <a class="contacts__link" href="mailto:mcyclemedia@gmail.com" rel="noreferrer noopener" target="_blank">
+              mcyclemedia@gmail.com
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="tel:+79991358154" rel="noreferrer noopener" target="_blank">
+              +7(999)135-81-54
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column footer__column--right">
+        <ul class="footer__social social social--footer">
+          <li class="social__item">
+            <a class="social__link" href="#" rel="noreferrer noopener" target="_blank">
+              ВКонтакте
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" rel="noreferrer noopener" target="_blank">
+              Behance
+            </a>
+          </li>
+          <li class="social__item">
+            <!-- добавить текст про запрещенную соц сеть? Куда? Атрибут title? -->
+            <a class="social__link" href="#" rel="noreferrer noopener" target="_blank">
+              Instagram
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#" rel="noreferrer noopener" target="_blank">
+              Telegram
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__column footer__column--down">
+        <ul class="footer__policy policy">
+          <li class="policy__item">
+            <a class="policy__link" href="#" rel="noreferrer noopener" target="_blank">
+              Политика конфиденциальности и обработки персональных данных
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
     <script src="scripts/index.js" defer></script>
   </body>

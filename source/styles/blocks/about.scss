@@ -1,0 +1,45 @@
+.about {
+  min-height: 550px;
+  height: 100vh;
+  padding: 20px;
+
+  color: $black;
+
+  background-color: $white;
+}
+
+.about__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 12.9vh auto 6.36vh;
+  padding: 4px 17px;
+
+  font-family: $secondary-font;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  text-transform: none;
+  color: $white;
+
+  background-color: $black;
+  border-radius: 40px;
+}
+
+.about__lead {
+  margin: 0 auto 3.64vh;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+.about__description {
+  margin: 0 auto 6.36vh;
+
+  text-align: center;
+}
+
+.about__work-button {
+  margin: 0 auto;
+}

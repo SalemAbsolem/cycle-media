@@ -1,0 +1,48 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 550px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.hero-section__title {
+  margin: 5.82vh auto 4.73vh;
+
+  font-weight: 600;
+  font-size: 41px;
+  text-align: center;
+}
+
+.hero-section__decorate {
+  display: block;
+  width: 66.25vw;
+  height: 66.25vw;
+  margin: 0 auto 4.73vh;
+
+  background-image: url("../../images/icons/stack.svg#cycle-icon");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  &.hero-section__decorate--title {
+    display: none;
+  }
+
+  // &.hero-section__decorate--section {
+
+  // }
+}
+
+.hero-section__title-tail {
+  display: none;
+}
+
+// .hero-section__adventages {
+
+// }
+
+.hero-section__form-button {
+  margin: auto auto 7.09vh;
+}

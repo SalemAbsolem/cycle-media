@@ -8,30 +8,25 @@
 /* BLOCKS */
 // PAGE HEADER + BUTTON
 @import "./blocks/page.scss";
-@import "./blocks/header-main.scss";
-@import "./blocks/menu-btn.scss";
-@import "./blocks/navigation.scss";
-@import "./blocks/main.scss";
+@import "./blocks/body.scss";
 @import "./blocks/button.scss";
+@import "./blocks/header.scss";
+@import "./blocks/page-menu.scss";
+@import "./blocks/site-navigation.scss";
+@import "./blocks/contacts-social.scss";
+@import "./blocks/social.scss";
+@import "./blocks/contacts.scss";
 
 // INDEX BLOCKS
+@import "./blocks/main.scss";
 @import "./blocks/hero-section.scss";
-@import "./blocks/food-options.scss";
-@import "./blocks/how-it-works.scss";
-@import "./blocks/example.scss";
-@import "./blocks/result-list.scss";
-@import "./blocks/comparison-slider.scss";
-
-// FORM BLOCKS
-@import "./blocks/form-programm.scss";
-
-// CATALOG BLOCKS
-@import "./blocks/catalog.scss";
-@import "./blocks/product.scss";
-@import "./blocks/parameter-list.scss";
-@import "./blocks/related-products.scss";
+@import "./blocks/adventages.scss";
+@import "./blocks/about.scss";
+@import "./blocks/portfolio.scss";
+@import "./blocks/work-category.scss";
+@import "./blocks/services.scss";
+@import "./blocks/types.scss";
 
 // PAGE FOOTER
-@import "./blocks/map.scss";
-@import "./blocks/footer-main.scss";
-@import "./blocks/social.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/policy.scss";

@@ -1,0 +1,15 @@
+.contacts {
+  @include normilize-list;
+
+  margin: 0;
+}
+
+.contacts__item {
+  &:not(:last-child) {
+    margin-bottom: 0.91vh;
+  }
+}
+
+.contacts__link {
+  color: inherit;
+}

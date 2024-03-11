@@ -1,0 +1,45 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  min-height: 550px;
+  height: 100vh;
+  padding: 20px;
+
+  color: $black;
+
+  background-color: $white;
+}
+
+.services__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 5.45vh auto 6.36vh;
+  padding: 4px 17px;
+
+  font-family: $secondary-font;
+  font-weight: 600;
+  font-size: 18px;
+  text-align: center;
+  text-transform: none;
+  color: $white;
+
+  background-color: $black;
+  border-radius: 40px;
+}
+
+.services__description {
+  margin: 0 auto 6.36vh;
+
+  font-size: 20px;
+  text-align: center;
+}
+
+.services__types {
+  margin: 0 auto 6.36vh;
+}
+
+.services__button {
+  margin: auto auto 8.55vh;
+}

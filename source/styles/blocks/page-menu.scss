@@ -1,0 +1,59 @@
+.page-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+
+  height: 100vh;
+
+  pointer-events: none;
+}
+
+.page-menu__link {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  pointer-events: auto;
+}
+
+// .page-menu__link-image {
+
+// }
+
+.page-menu__button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.page-menu__scroll {
+  display: none;
+
+  pointer-events: auto;
+}
+
+// .page-menu__scroll-percent {
+
+// }
+
+.page-menu__time {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+
+  margin: 0;
+
+  pointer-events: auto;
+}
+
+// .page-menu__time-spb {
+
+// }
+
+.page-menu__form-button {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+
+  pointer-events: auto;
+}

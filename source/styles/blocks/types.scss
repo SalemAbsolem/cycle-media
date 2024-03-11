@@ -1,0 +1,32 @@
+.types {
+  @include normilize-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.types__item {
+  padding: 4px 13px;
+  font-family: $secondary-font;
+  text-transform: none;
+
+  border: 1px solid $black;
+  border-radius: 40px;
+
+  &:not(:last-child) {
+    margin-bottom: 2.73vh;
+  }
+
+  // &.types__item--design {
+
+  // }
+
+  &.types__item--marketing {
+    color: $white;
+
+    background-color: $black;
+  }
+}

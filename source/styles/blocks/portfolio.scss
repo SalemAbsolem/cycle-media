@@ -1,0 +1,66 @@
+// .portfolio {
+
+// }
+
+.portfolio__list {
+  @include normilize-list;
+
+  margin: 0 auto;
+}
+
+.portfolio__item {
+  min-height: 480px;
+  height: 87vh;
+}
+
+.portfolio__link {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+
+  color: inherit;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.portfolio__title {
+  margin: 0 0 0.73vh;
+
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.portfolio__description {
+  max-width: 165px;
+  width: 51.56vw;
+  margin: 0 0 auto;
+}
+
+.portfolio__arrow {
+  position: absolute;
+  right: 20px;
+  bottom: 25px;
+
+  display: block;
+  width: 38px;
+  height: 38px;
+
+  background-image: url("../../images/icons/stack.svg#arrow-icon");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.portfolio__work-category {
+  margin: 0 0 4.55vh;
+}
+
+.portfolio__count {
+  margin: 0 0 5px;
+}

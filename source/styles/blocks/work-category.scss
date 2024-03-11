@@ -1,0 +1,25 @@
+.work-category {
+  @include normilize-list;
+}
+
+.work-category__item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-child) {
+    margin-bottom: 1.5vh;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+
+    background-image: url("../../images/icons/stack.svg#list-arrow-icon");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

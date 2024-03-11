@@ -1,5 +1,6 @@
-$primiry-font: "Lato", "Arial", sans-serif;
-$special-font: "Oswald", "Arial", sans-serif;
+$primary-font: "NEXT ART", "Arial", sans-serif;
+$secondary-font: "TT Wellingtons", "Arial", sans-serif;
 
-@include font-face("Lato", 400, normal, url("../../fonts/lato/Lato-Regular.woff2") format("woff2"));
-@include font-face("Oswald", 400, normal, url("../../fonts/oswald/oswaldregular.woff2") format("woff2"));
+@include font-face("NEXT ART", 400, normal, url("../../fonts/next-art/next-art-regular.woff2") format("woff2"), url("../../fonts/next-art/next-art-regular.woff") format("woff"));
+@include font-face("NEXT ART", 600, normal, url("../../fonts/next-art/next-art-semibold.woff2") format("woff2"), url("../../fonts/next-art/next-art-semibold.woff") format("woff"));
+@include font-face("TT Wellingtons", 600, italic, url("../../fonts/tt-wellingtons/tt-wellingtons-demibold-italic.woff2") format("woff2"), url("../../fonts/tt-wellingtons/tt-wellingtons-demibold-italic.woff") format("woff"));
