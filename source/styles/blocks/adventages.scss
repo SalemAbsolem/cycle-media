@@ -6,7 +6,9 @@
   width: 100%;
   margin: 0 0 4.73vh;
 
-  overflow: hidden;
+  overflow: auto;
+
+  scrollbar-width: none;
 }
 
 .adventages__item {
@@ -15,7 +17,7 @@
   align-items: center;
   justify-content: center;
   min-width: 280px;
-  transform: translateX(calc(-100vw + 20px));
+  // transform: translateX(calc(-100% - 20px));
 }
 
 .adventages__title {
@@ -26,6 +28,7 @@
   font-family: $secondary-font;
   font-size: 18px;
   font-weight: 600;
+  font-style: italic;
   text-transform: none;
   text-align: center;
   color: $black;
