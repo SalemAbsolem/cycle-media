@@ -8,6 +8,10 @@
   color: $black;
 
   background-color: $white;
+
+  @media #{$medium-mobile-only} {
+    min-height: 820px;
+  }
 }
 
 .services__title {
@@ -28,6 +32,10 @@
 
   background-color: $black;
   border-radius: 40px;
+
+  @media #{$medium-mobile-only} {
+    margin: 10.73vh auto 4.88vh;
+  }
 }
 
 .services__description {
@@ -35,7 +43,14 @@
 
   font-size: 20px;
   text-align: center;
+
+  @media #{$medium-mobile-only} {
+    margin-bottom: 7.32vh;
+
+    font-size: 30px;
+  }
 }
+
 
 .services__types {
   margin: 0 auto 6.36vh;
@@ -43,4 +58,8 @@
 
 .services__button {
   margin: auto auto 8.55vh;
+
+  @media #{$medium-mobile-only} {
+    margin-bottom: 10.61vh;
+  }
 }

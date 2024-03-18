@@ -5,6 +5,10 @@
   height: 100vh;
   margin: 0 auto;
   padding: 20px;
+
+  @media #{$medium-mobile-only} {
+    min-height: 820px;
+  }
 }
 
 .hero-section__title {
@@ -13,6 +17,13 @@
   font-weight: 600;
   font-size: 41px;
   text-align: center;
+
+  @media #{$medium-mobile-only} {
+    margin: 5.12vh auto 4.88vh;
+
+    font-size: 65px;
+    line-height: 48px;
+  }
 }
 
 .hero-section__decorate {
@@ -33,16 +44,34 @@
   // &.hero-section__decorate--section {
 
   // }
+
+  @media #{$medium-mobile-only} {
+    width: 79.17vw;
+    height: 79.17vw;
+    margin-bottom: 4.88vh;
+  }
 }
 
 .hero-section__title-tail {
-  display: none;
+  font-size: 19px;
+
+  @media #{$small-mobile-only} {
+    display: none;
+  }
 }
 
-// .hero-section__adventages {
+.hero-section__adventages {
+  margin: 0 0 4.73vh;
 
-// }
+  @media #{$medium-mobile-only} {
+    margin-bottom: 5.12vh;
+  }
+}
 
 .hero-section__form-button {
   margin: auto auto 7.09vh;
+
+  @media #{$medium-mobile-only} {
+    margin-bottom: 5.24vh;
+  }
 }

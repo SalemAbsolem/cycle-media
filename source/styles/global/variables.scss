@@ -17,7 +17,7 @@ $breakpoint-gap: 0.02px;
 
 // МЕДИА-ВЫРАЖЕНИЯ
 // ТЕЛЕФОНЫ
-$small-mobile-only: "(max-width: #{braekpoint-mobile-m - $breakpoint-gap})";
+$small-mobile-only: "(max-width: #{$braekpoint-mobile-m - $breakpoint-gap})";
 $medium-mobile-only: "(min-width: #{$braekpoint-mobile-m}) and (max-width: #{$breakpoint-tablet - $breakpoint-gap})";
 $mobile-only: "(max-width: #{$breakpoint-tablet - $breakpoint-gap})";
 // ПЛАНШЕТЫ

@@ -4,11 +4,10 @@
   display: flex;
   gap: 7.19vw;
   width: 100%;
-  margin: 0 0 4.73vh;
 
-  overflow: auto;
+  overflow-x: clip;
 
-  scrollbar-width: none;
+  // scrollbar-width: none;
 }
 
 .adventages__item {

@@ -17,20 +17,40 @@
   pointer-events: auto;
 }
 
-// .page-menu__link-image {
-
-// }
+.page-menu__link-image {
+  @media #{$medium-mobile-only} {
+    width: 133px;
+    height: 22px;
+  }
+}
 
 .page-menu__button {
   position: absolute;
   top: 20px;
-  right: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  @media #{$small-mobile-only} {
+    left: unset;
+    right: 20px;
+
+    transform: none;
+  }
 }
 
 .page-menu__scroll {
-  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  margin: 0;
 
   pointer-events: auto;
+
+  @media #{$small-mobile-only} {
+    display: none;
+  }
 }
 
 // .page-menu__scroll-percent {

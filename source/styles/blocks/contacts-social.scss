@@ -1,12 +1,28 @@
 .contacts-social {
   display: grid;
   row-gap: 5.46vh;
+
+  @media #{$medium-mobile-only} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .contacts-social__social {
   justify-self: right;
+
+  @media #{$medium-mobile-only} {
+    grid-column: -2 / -1;
+  }
 }
 
-// .contacts-social__contacts {
+.contacts-social__contacts {
+  margin: 0 0 60px;
 
-// }
+  @media #{$medium-mobile-only} {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+
+    margin-bottom: 0;
+  }
+}

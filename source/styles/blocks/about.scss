@@ -6,6 +6,10 @@
   color: $black;
 
   background-color: $white;
+
+  @media #{$medium-mobile-only} {
+    min-height: 820px;
+  }
 }
 
 .about__title {
@@ -26,6 +30,10 @@
 
   background-color: $black;
   border-radius: 40px;
+
+  @media #{$medium-mobile-only} {
+    margin: 18.15vh auto 4.88vh;
+  }
 }
 
 .about__lead {
@@ -33,12 +41,22 @@
 
   font-size: 20px;
   text-align: center;
+
+  @media #{$medium-mobile-only} {
+    margin-bottom: 2.44vh;
+
+    font-size: 30px;
+  }
 }
 
 .about__description {
   margin: 0 auto 6.36vh;
 
   text-align: center;
+
+  @media #{$medium-mobile-only} {
+    margin-bottom: 3.64vh;
+  }
 }
 
 .about__work-button {
