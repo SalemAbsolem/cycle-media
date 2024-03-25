@@ -9,6 +9,11 @@
   @media #{$not-mobile} {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media #{$desktop-only} {
+    position: absolute;
+    inset: auto 20px 71px 20px;
+  }
 }
 
 .contacts-social__social {

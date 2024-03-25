@@ -58,7 +58,7 @@
 }
 
 .button__text {
-  @media #{$tablet-only} {
+  @media #{$not-mobile} {
     font-size: 18px;
   }
 }

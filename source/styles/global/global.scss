@@ -4,6 +4,25 @@
   box-sizing: border-box;
 }
 
+@media #{$desktop-only} {
+  ::-webkit-scrollbar-thumb {
+    background: $white;
+    border-radius: 0;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+    background: $black;
+  }
+
+  html {
+    scrollbar-color: $white $black;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+  }
+}
+
 body {
   margin: 0;
 }

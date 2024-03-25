@@ -18,6 +18,10 @@
   @media #{$tablet-only} {
     margin: 27.73vh 0 10.64vh;
   }
+
+  @media #{$small-desktop-only} {
+    margin: 15.67vh 0 13.26vh;
+  }
 }
 
 .site-navigation__item {
@@ -30,6 +34,10 @@
 
     @media #{$tablet-only} {
       margin-bottom: 1.56vh;
+    }
+
+    @media #{$small-desktop-only} {
+      margin-bottom: 1.5vh;
     }
   }
 }

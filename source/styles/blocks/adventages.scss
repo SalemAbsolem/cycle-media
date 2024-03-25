@@ -21,6 +21,11 @@
   @media #{$tablet-only} {
     min-width: 320px;
   }
+
+  @media #{$small-desktop-only} {
+    min-width: 320px;
+    max-width: 1200px;
+  }
 }
 
 .adventages__title {
@@ -39,7 +44,19 @@
   background-color: $white;
   border-radius: 40px;
 
+  &::selection {
+    background: $black;
+    color: $white;
+  }
+
   @media #{$tablet-only} {
+    padding: 6px 19px;
+    margin: 0 auto 1.46vh;
+
+    font-size: 20px;
+  }
+
+  @media #{$small-desktop-only} {
     padding: 6px 19px;
     margin: 0 auto 1.46vh;
 

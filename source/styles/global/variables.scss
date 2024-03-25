@@ -29,7 +29,7 @@ $medium-desktop-only: "(min-width: #{$breakpoint-desktop-m}) and (max-width: #{$
 $large-desktop-only: "(min-width: #{$breakpoint-desktop-l})";
 // ИСКЛЮЧЕНИЯ
 $not-mobile: "(min-width: #{$breakpoint-tablet})";
-$not-desktop: "(max-width: #{$breakpoint-desktop-l - $breakpoint-gap})";
+$not-desktop: "(max-width: #{$breakpoint-desktop-s - $breakpoint-gap})";
 
 // ДВОЙНАЯ ПЛОТНОСТЬ
 $retina: "(min-resolution: 2dppx)";

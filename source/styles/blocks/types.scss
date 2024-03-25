@@ -26,17 +26,31 @@
     }
   }
 
-  // &.types__item--design {
-
-  // }
+  &.types__item--design {
+    &::selection {
+      background: $black;
+      color: $white;
+    }
+  }
 
   &.types__item--marketing {
     color: $white;
 
     background-color: $black;
+
+    &::selection {
+      background: $white;
+      color: $black;
+    }
   }
 
   @media #{$tablet-only} {
+    padding: 5px 22px;
+
+    font-size: 25px;
+  }
+
+  @media #{$small-desktop-only} {
     padding: 5px 22px;
 
     font-size: 25px;

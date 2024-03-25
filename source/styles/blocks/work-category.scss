@@ -16,6 +16,10 @@
     @media #{$tablet-only} {
       margin-bottom: 10px;
     }
+
+    @media #{$small-desktop-only} {
+      margin-bottom: 10px;
+    }
   }
 
   &::before {
@@ -31,6 +35,11 @@
     background-repeat: no-repeat;
 
     @media #{$tablet-only} {
+      width: 18px;
+      height: 18px;
+    }
+
+    @media #{$small-desktop-only} {
       width: 18px;
       height: 18px;
     }

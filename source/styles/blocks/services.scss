@@ -9,8 +9,21 @@
 
   background-color: $white;
 
+  ::selection {
+    background: $black;
+    color: $white;
+  }
+
   @media #{$medium-mobile-only} {
     min-height: 820px;
+  }
+
+  @media #{$tablet-only} {
+    min-height: 1024px;
+  }
+
+  @media #{$small-desktop-only} {
+    min-height: 675px;
   }
 }
 
@@ -33,12 +46,24 @@
   background-color: $black;
   border-radius: 40px;
 
+  &::selection {
+    background: $white;
+    color: $black;
+  }
+
   @media #{$medium-mobile-only} {
     margin: 10.73vh auto 4.88vh;
   }
 
   @media #{$tablet-only} {
     margin: 7.91vh auto 4.88vh;
+    padding: 6px 20px;
+
+    font-size: 20px;
+  }
+
+  @media #{$small-desktop-only} {
+    margin: 5.63vh auto 7.41vh;
     padding: 6px 20px;
 
     font-size: 20px;
@@ -62,6 +87,12 @@
 
     font-size: 50px;
   }
+
+  @media #{$small-desktop-only} {
+    margin-bottom: 8.44vh;
+
+    font-size: 50px;
+  }
 }
 
 
@@ -78,5 +109,9 @@
 
   @media #{$tablet-only} {
     margin-bottom: 7.91vh;
+  }
+
+  @media #{$small-desktop-only} {
+    margin-bottom: 8.44vh;
   }
 }

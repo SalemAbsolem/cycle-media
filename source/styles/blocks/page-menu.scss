@@ -7,6 +7,11 @@
 
   pointer-events: none;
   mix-blend-mode: difference;
+
+  ::selection {
+    background: $white;
+    color: $black;
+  }
 }
 
 .page-menu__link {
@@ -23,12 +28,17 @@
 
   @media #{$medium-mobile-only} {
     width: clamp(133px, 27.71vw, 199px);
-    height: clamp(22px, 2.67vh, 33px);
+    height: clamp(22px, 4.89vh, 33px);
   }
 
   @media #{$tablet-only} {
     width: 199px;
     height: 33px;
+  }
+
+  @media #{$desktop-only} {
+    width: clamp(199px, 16.58vw, 264px);
+    height: clamp(33px, 2.67vh, 28px);
   }
 }
 

@@ -9,6 +9,10 @@
     @media #{$tablet-only} {
       margin-bottom: 8px;
     }
+
+    @media #{$desktop-only} {
+      margin-bottom: 8px;
+    }
   }
 }
 
