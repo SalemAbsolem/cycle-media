@@ -18,9 +18,17 @@
 }
 
 .page-menu__link-image {
+  width: clamp(93px, 29.06vw, 133px);
+  height: clamp(15px, 2.73vh, 22px);
+
   @media #{$medium-mobile-only} {
-    width: 133px;
-    height: 22px;
+    width: clamp(133px, 27.71vw, 199px);
+    height: clamp(22px, 2.67vh, 33px);
+  }
+
+  @media #{$tablet-only} {
+    width: 199px;
+    height: 33px;
   }
 }
 
@@ -51,6 +59,10 @@
   @media #{$small-mobile-only} {
     display: none;
   }
+
+  @media #{$not-mobile} {
+    font-size: 18px;
+  }
 }
 
 // .page-menu__scroll-percent {
@@ -65,6 +77,10 @@
   margin: 0;
 
   pointer-events: auto;
+
+  @media #{$not-mobile} {
+    font-size: 18px;
+  }
 }
 
 // .page-menu__time-spb {

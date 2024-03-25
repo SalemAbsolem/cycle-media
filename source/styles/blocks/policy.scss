@@ -14,4 +14,10 @@
   color: inherit;
 
   opacity: 0.5;
+
+  @media #{$not-mobile} {
+    max-width: 300px;
+
+    font-size: 12px;
+  }
 }

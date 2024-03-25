@@ -5,6 +5,10 @@
   @media #{$medium-mobile-only} {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @media #{$not-mobile} {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .contacts-social__social {
@@ -13,12 +17,24 @@
   @media #{$medium-mobile-only} {
     grid-column: -2 / -1;
   }
+
+  @media #{$not-mobile} {
+    grid-column: -2 / -1;
+  }
 }
 
 .contacts-social__contacts {
   margin: 0 0 60px;
 
   @media #{$medium-mobile-only} {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+
+    margin-bottom: 0;
+  }
+
+  @media #{$not-mobile} {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     align-self: flex-end;

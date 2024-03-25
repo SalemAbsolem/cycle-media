@@ -12,6 +12,10 @@
     @media #{$medium-mobile-only} {
       margin-bottom: 0.98vh;
     }
+
+    @media #{$tablet-only} {
+      margin-bottom: 10px;
+    }
   }
 
   &::before {
@@ -25,5 +29,10 @@
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media #{$tablet-only} {
+      width: 18px;
+      height: 18px;
+    }
   }
 }

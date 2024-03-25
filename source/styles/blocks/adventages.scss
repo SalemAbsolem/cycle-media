@@ -17,6 +17,10 @@
   justify-content: center;
   min-width: 280px;
   // transform: translateX(calc(-100% - 20px));
+
+  @media #{$tablet-only} {
+    min-width: 320px;
+  }
 }
 
 .adventages__title {
@@ -34,6 +38,13 @@
 
   background-color: $white;
   border-radius: 40px;
+
+  @media #{$tablet-only} {
+    padding: 6px 19px;
+    margin: 0 auto 1.46vh;
+
+    font-size: 20px;
+  }
 }
 
 .adventages__description {

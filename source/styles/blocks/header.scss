@@ -33,6 +33,10 @@
   @media #{$medium-mobile-only} {
     margin-bottom: 4.27vh;
   }
+
+  @media #{$tablet-only} {
+    margin-bottom: 4.1vh;
+  }
 }
 
 // .header__contacts-social {

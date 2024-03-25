@@ -20,6 +20,10 @@
 
   &:not(:last-child) {
     margin-bottom: 2.73vh;
+
+    @media #{$tablet-only} {
+      margin-bottom: 2.93vh;
+    }
   }
 
   // &.types__item--design {
@@ -30,5 +34,11 @@
     color: $white;
 
     background-color: $black;
+  }
+
+  @media #{$tablet-only} {
+    padding: 5px 22px;
+
+    font-size: 25px;
   }
 }

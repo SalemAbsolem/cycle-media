@@ -36,6 +36,13 @@
   @media #{$medium-mobile-only} {
     margin: 10.73vh auto 4.88vh;
   }
+
+  @media #{$tablet-only} {
+    margin: 7.91vh auto 4.88vh;
+    padding: 6px 20px;
+
+    font-size: 20px;
+  }
 }
 
 .services__description {
@@ -49,6 +56,12 @@
 
     font-size: 30px;
   }
+
+  @media #{$tablet-only} {
+    margin-bottom: 2.93vh;
+
+    font-size: 50px;
+  }
 }
 
 
@@ -61,5 +74,9 @@
 
   @media #{$medium-mobile-only} {
     margin-bottom: 10.61vh;
+  }
+
+  @media #{$tablet-only} {
+    margin-bottom: 7.91vh;
   }
 }

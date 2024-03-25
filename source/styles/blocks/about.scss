@@ -34,6 +34,13 @@
   @media #{$medium-mobile-only} {
     margin: 18.15vh auto 4.88vh;
   }
+
+  @media #{$tablet-only} {
+    margin: 15.03vh auto 4.88vh;
+    padding: 6px 20px;
+
+    font-size: 20px;
+  }
 }
 
 .about__lead {
@@ -47,6 +54,12 @@
 
     font-size: 30px;
   }
+
+  @media #{$tablet-only} {
+    margin-bottom: 2.93vh;
+
+    font-size: 50px;
+  }
 }
 
 .about__description {
@@ -56,6 +69,10 @@
 
   @media #{$medium-mobile-only} {
     margin-bottom: 3.64vh;
+  }
+
+  @media #{$tablet-only} {
+    margin-bottom: 4.88vh;
   }
 }
 

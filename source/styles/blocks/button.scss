@@ -26,23 +26,39 @@
 
   &.button--open-quiz {
     font-size: 18px;
+
+    @media #{$not-mobile} {
+      font-size: 25px;
+    }
   }
 
-  // &.button--open-form {
-
-  // }
+  &.button--open-form {
+    @media #{$not-mobile} {
+      font-size: 18px;
+    }
+  }
 
   &.button--work {
     font-size: 18px;
     color: $black;
+
+    @media #{$not-mobile} {
+      font-size: 25px;
+    }
   }
 
   &.button--service {
     font-size: 18px;
     color: $black;
+
+    @media #{$not-mobile} {
+      font-size: 25px;
+    }
   }
 }
 
-// .button__text {
-
-// }
+.button__text {
+  @media #{$tablet-only} {
+    font-size: 18px;
+  }
+}

@@ -5,6 +5,10 @@
 .contacts__item {
   &:not(:last-child) {
     margin-bottom: 0.91vh;
+
+    @media #{$tablet-only} {
+      margin-bottom: 8px;
+    }
   }
 }
 

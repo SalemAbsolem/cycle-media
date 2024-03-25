@@ -5,10 +5,6 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: 0.91vh;
-  // min-width: 187px;
-  // width: 58.44vw;
-  // min-height: 40px;
-  // height: 6.36vh;
   margin: 0;
 
   &.social--footer {
@@ -23,10 +19,20 @@
     min-height: 40px;
     height: 6.36vh;
   }
+
+  @media #{$not-mobile} {
+    gap: 0;
+  }
 }
 
 .social__item {
   text-align: right;
+
+  &:not(:last-child) {
+    @media #{$tablet-only} {
+      margin-bottom: 8px;
+    }
+  }
 }
 
 .social__link {
