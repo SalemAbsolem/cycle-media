@@ -8,6 +8,9 @@
   overflow-x: clip;
 
   // scrollbar-width: none;
+  @media #{$small-desktop-only} {
+    max-width: 1200px;
+  }
 }
 
 .adventages__item {
@@ -24,7 +27,6 @@
 
   @media #{$small-desktop-only} {
     min-width: 320px;
-    max-width: 1200px;
   }
 }
 
