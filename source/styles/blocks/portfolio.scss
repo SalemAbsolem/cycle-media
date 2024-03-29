@@ -23,8 +23,13 @@
     min-height: 858px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     min-height: 675px;
+    height: 100vh;
+  }
+
+  @media #{$medium-desktop-only} {
+    min-height: 855px;
   }
 }
 
@@ -62,10 +67,16 @@
     font-size: 50px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     margin-bottom: 2.22vh;
 
     font-size: 50px;
+  }
+
+  @media #{$medium-desktop-only} {
+    margin-bottom: 1.99vh;
+
+    font-size: 60px;
   }
 }
 
@@ -80,11 +91,18 @@
     font-size: 20px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     max-width: 280px;
     margin-bottom: 3.7vh;
 
     font-size: 20px;
+  }
+
+  @media #{$medium-desktop-only} {
+    max-width: 300px;
+    margin-bottom: 4.91vh;
+
+    font-size: 25px;
   }
 }
 
@@ -116,10 +134,14 @@
     margin-bottom: 3.9vh;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     width: 60px;
     height: 60px;
     margin-bottom: 5.93vh;
+  }
+
+  @media #{$medium-desktop-only} {
+    margin-bottom: 4.8vh;
   }
 }
 
@@ -130,7 +152,7 @@
     margin-bottom: 2.93vh;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     margin-bottom: 4.44vh;
   }
 }

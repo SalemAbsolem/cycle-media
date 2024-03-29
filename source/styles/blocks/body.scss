@@ -23,6 +23,10 @@
   @media #{$not-mobile} {
     font-size: 16px;
   }
+
+  @media #{$medium-desktop-only} {
+    font-size: 20px;
+  }
 }
 
 // .body__header {

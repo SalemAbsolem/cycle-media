@@ -20,8 +20,12 @@
     min-height: 1024px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     min-height: 675px;
+  }
+
+  @media #{$medium-desktop-only} {
+    min-height: 855px;
   }
 }
 
@@ -60,11 +64,18 @@
     font-size: 20px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     margin: 9.04vh auto 7.41vh;
     padding: 6px 20px;
 
     font-size: 20px;
+  }
+
+  @media #{$medium-desktop-only} {
+    margin: 12.16vh auto 8.85vh;
+    padding: 6px 24px;
+
+    font-size: 25px;
   }
 }
 
@@ -86,11 +97,18 @@
     font-size: 50px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     max-width: 1160px;
     margin: 0 auto 4.44vh;
 
     font-size: 50px;
+  }
+
+  @media #{$medium-desktop-only} {
+    max-width: 1360px;
+    margin: 0 auto 4.33vh;
+
+    font-size: 60px;
   }
 }
 
@@ -107,9 +125,14 @@
     margin-bottom: 4.88vh;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     max-width: 750px;
     margin: 0 auto 7.41vh;
+  }
+
+  @media #{$medium-desktop-only} {
+    max-width: 910px;
+    margin: 0 auto 8.85vh;
   }
 }
 

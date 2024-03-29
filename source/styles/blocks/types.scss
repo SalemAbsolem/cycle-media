@@ -50,9 +50,15 @@
     font-size: 25px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     padding: 5px 22px;
 
     font-size: 25px;
+  }
+
+  @media #{$medium-desktop-only} {
+    padding: 6px 28px;
+
+    font-size: 30px;
   }
 }

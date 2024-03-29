@@ -20,4 +20,10 @@
 
     font-size: 12px;
   }
+
+  @media #{$medium-desktop-only} {
+    max-width: 325px;
+
+    font-size: 16px;
+  }
 }

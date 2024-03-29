@@ -30,11 +30,19 @@
     @media #{$not-mobile} {
       font-size: 25px;
     }
+
+    @media #{$medium-desktop-only} {
+      font-size: 30px;
+    }
   }
 
   &.button--open-form {
     @media #{$not-mobile} {
       font-size: 18px;
+    }
+
+    @media #{$medium-desktop-only} {
+      font-size: 25px;
     }
   }
 
@@ -45,6 +53,10 @@
     @media #{$not-mobile} {
       font-size: 25px;
     }
+
+    @media #{$medium-desktop-only} {
+      font-size: 30px;
+    }
   }
 
   &.button--service {
@@ -54,11 +66,19 @@
     @media #{$not-mobile} {
       font-size: 25px;
     }
+
+    @media #{$medium-desktop-only} {
+      font-size: 30px;
+    }
   }
 }
 
 .button__text {
   @media #{$not-mobile} {
     font-size: 18px;
+  }
+
+  @media #{$medium-desktop-only} {
+    font-size: 25px;
   }
 }

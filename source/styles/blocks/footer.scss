@@ -73,6 +73,13 @@
 
     font-size: 30px;
   }
+
+  @media #{$medium-desktop-only} {
+    max-width: 700px;
+    margin: 0 auto 14px;
+
+    font-size: 40px;
+  }
 }
 
 .footer__copyright {
@@ -84,7 +91,11 @@
   @media #{$not-mobile} {
     margin: 0 auto 34px;
 
-    font-size: 16px;
+    font-size: inherit;
+  }
+
+  @media #{$medium-desktop-only} {
+    margin: 0 auto;
   }
 }
 
@@ -108,9 +119,14 @@
     height: 38px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     width: 226px;
     height: 37px;
+  }
+
+  @media #{$medium-desktop-only} {
+    width: 265px;
+    height: 44px;
   }
 }
 
@@ -124,4 +140,8 @@
 
 .footer__policy {
   margin: 0;
+
+  @media #{$medium-desktop-only} {
+    margin-bottom: 20px;
+  }
 }

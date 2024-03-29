@@ -22,6 +22,10 @@
   @media #{$small-desktop-only} {
     margin: 15.67vh 0 13.26vh;
   }
+
+  @media #{$medium-desktop-only} {
+    margin: 22.8vh 0 15.54vh;
+  }
 }
 
 .site-navigation__item {

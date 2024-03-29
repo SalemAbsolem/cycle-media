@@ -1,7 +1,8 @@
 .adventages {
   @include normilize-list;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 7.19vw;
   width: 100%;
 
@@ -10,6 +11,10 @@
   // scrollbar-width: none;
   @media #{$small-desktop-only} {
     max-width: 1200px;
+  }
+
+  @media #{$medium-desktop-only} {
+    max-width: 1520px;
   }
 }
 
@@ -25,7 +30,7 @@
     min-width: 320px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     min-width: 320px;
   }
 }
@@ -58,11 +63,18 @@
     font-size: 20px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     padding: 6px 19px;
     margin: 0 auto 1.46vh;
 
     font-size: 20px;
+  }
+
+  @media #{$medium-desktop-only} {
+    padding: 6px 23px;
+    margin: 0 auto 1.75vh;
+
+    font-size: 25px;
   }
 }
 

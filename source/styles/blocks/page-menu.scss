@@ -40,6 +40,11 @@
     width: clamp(199px, 16.58vw, 264px);
     height: clamp(33px, 2.67vh, 28px);
   }
+
+  @media #{$medium-desktop-only} {
+    width: clamp(265px, 16.58vw, 331px);
+    height: clamp(44px, 2.67vh, 54px);
+  }
 }
 
 .page-menu__button {
@@ -73,6 +78,10 @@
   @media #{$not-mobile} {
     font-size: 18px;
   }
+
+  @media #{$medium-desktop-only} {
+    font-size: 25px;
+  }
 }
 
 // .page-menu__scroll-percent {
@@ -90,6 +99,10 @@
 
   @media #{$not-mobile} {
     font-size: 18px;
+  }
+
+  @media #{$medium-desktop-only} {
+    font-size: 25px;
   }
 }
 
