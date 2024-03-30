@@ -45,6 +45,11 @@
     width: clamp(265px, 16.58vw, 331px);
     height: clamp(44px, 2.67vh, 54px);
   }
+
+  @media #{$large-desktop-only} {
+    width: 331px;
+    height: 54px;
+  }
 }
 
 .page-menu__button {
@@ -82,6 +87,10 @@
   @media #{$medium-desktop-only} {
     font-size: 25px;
   }
+
+  @media #{$large-desktop-only} {
+    font-size: 30px;
+  }
 }
 
 // .page-menu__scroll-percent {
@@ -103,6 +112,10 @@
 
   @media #{$medium-desktop-only} {
     font-size: 25px;
+  }
+
+  @media #{$large-desktop-only} {
+    font-size: 30px;
   }
 }
 

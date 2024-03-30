@@ -27,6 +27,10 @@
   @media #{$medium-desktop-only} {
     min-height: 855px;
   }
+
+  @media #{$large-desktop-only} {
+    min-height: 1080px;
+  }
 }
 
 .about__title {
@@ -77,6 +81,13 @@
 
     font-size: 25px;
   }
+
+  @media #{$large-desktop-only} {
+    margin: 15.09vh auto 5.55vh;
+    padding: 6px 29px;
+
+    font-size: 30px;
+  }
 }
 
 .about__lead {
@@ -110,6 +121,13 @@
 
     font-size: 60px;
   }
+
+  @media #{$large-desktop-only} {
+    max-width: 1700px;
+    margin: 0 auto 3.7vh;
+
+    font-size: 70px;
+  }
 }
 
 .about__description {
@@ -133,6 +151,11 @@
   @media #{$medium-desktop-only} {
     max-width: 910px;
     margin: 0 auto 8.85vh;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 1150px;
+    margin: 0 auto 5.55vh;
   }
 }
 

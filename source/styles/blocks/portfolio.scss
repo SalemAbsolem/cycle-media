@@ -31,6 +31,10 @@
   @media #{$medium-desktop-only} {
     min-height: 855px;
   }
+
+  @media #{$large-desktop-only} {
+    min-height: 1080px;
+  }
 }
 
 .portfolio__link {
@@ -78,6 +82,12 @@
 
     font-size: 60px;
   }
+
+  @media #{$large-desktop-only} {
+    margin-bottom: 1.85vh;
+
+    font-size: 70px;
+  }
 }
 
 .portfolio__description {
@@ -103,6 +113,13 @@
     margin-bottom: 4.91vh;
 
     font-size: 25px;
+  }
+
+  @media #{$large-desktop-only} {
+    max-width: 350px;
+    margin-bottom: 2.78vh;
+
+    font-size: 30px;
   }
 }
 
@@ -142,6 +159,12 @@
 
   @media #{$medium-desktop-only} {
     margin-bottom: 4.8vh;
+  }
+
+  @media #{$large-desktop-only} {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 4.17vh;
   }
 }
 

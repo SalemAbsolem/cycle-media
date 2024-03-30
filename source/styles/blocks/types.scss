@@ -61,4 +61,10 @@
 
     font-size: 30px;
   }
+
+  @media #{$medium-desktop-only} {
+    padding: 6px 29px;
+
+    font-size: 30px;
+  }
 }

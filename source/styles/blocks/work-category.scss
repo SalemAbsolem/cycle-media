@@ -52,5 +52,10 @@
       width: 22px;
       height: 22px;
     }
+
+    @media #{$large-desktop-only} {
+      width: 30px;
+      height: 30px;
+    }
   }
 }

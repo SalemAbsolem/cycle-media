@@ -27,6 +27,10 @@
   @media #{$medium-desktop-only} {
     font-size: 20px;
   }
+
+  @media #{$large-desktop-only} {
+    font-size: 25px;
+  }
 }
 
 // .body__header {

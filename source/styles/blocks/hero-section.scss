@@ -19,12 +19,16 @@
     min-height: 1024px;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     min-height: 675px;
   }
 
   @media #{$medium-desktop-only} {
     min-height: 855px;
+  }
+
+  @media #{$large-desktop-only} {
+    min-height: 1080px;
   }
 }
 
@@ -64,6 +68,13 @@
     margin: 20.21vh auto 8.27vh;
 
     font-size: clamp(110px, 10vw, 182px);
+    line-height: 70px;
+  }
+
+  @media #{$large-desktop-only} {
+    margin: 21.85vh auto 13.61vh;
+
+    font-size: 182px;
     line-height: 70px;
   }
 }
@@ -108,6 +119,12 @@
     height: 10.83vw;
     margin: 0 7px 0;
   }
+
+  @media #{$large-desktop-only} {
+    width: 11.3vw;
+    height: 11.3vw;
+    margin: 0 40px 0;
+  }
 }
 
 .hero-section__title-tail {
@@ -129,6 +146,10 @@
   @media #{$medium-desktop-only} {
     font-size: 40px;
   }
+
+  @media #{$large-desktop-only} {
+    font-size: 45px;
+  }
 }
 
 .hero-section__adventages {
@@ -144,6 +165,10 @@
 
   @media #{$desktop-only} {
     margin: 0 auto 9.48vh;
+  }
+
+  @media #{$large-desktop-only} {
+    margin: 0 auto 6.94vh;
   }
 }
 

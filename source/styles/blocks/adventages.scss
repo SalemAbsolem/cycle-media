@@ -16,6 +16,10 @@
   @media #{$medium-desktop-only} {
     max-width: 1520px;
   }
+
+  @media #{$large-desktop-only} {
+    max-width: 1920px;
+  }
 }
 
 .adventages__item {
@@ -75,6 +79,13 @@
     margin: 0 auto 1.75vh;
 
     font-size: 25px;
+  }
+
+  @media #{$large-desktop-only} {
+    padding: 6px 29px;
+    margin: 0 auto 1.85vh;
+
+    font-size: 30px;
   }
 }
 

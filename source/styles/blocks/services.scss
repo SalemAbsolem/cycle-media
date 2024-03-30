@@ -29,6 +29,10 @@
   @media #{$medium-desktop-only} {
     min-height: 855px;
   }
+
+  @media #{$large-desktop-only} {
+    min-height: 1080px;
+  }
 }
 
 .services__title {
@@ -79,6 +83,13 @@
 
     font-size: 25px;
   }
+
+  @media #{$large-desktop-only} {
+    margin: 10.19vh auto 5.56vh;
+    padding: 6px 29px;
+
+    font-size: 30px;
+  }
 }
 
 .services__description {
@@ -110,6 +121,12 @@
 
     font-size: 60px;
   }
+
+  @media #{$large-desktop-only} {
+    margin-bottom: 10.19vh;
+
+    font-size: 70px;
+  }
 }
 
 
@@ -134,5 +151,9 @@
 
   @media #{$medium-desktop-only} {
     margin-bottom: 8.07vh;
+  }
+
+  @media #{$large-desktop-only} {
+    margin-bottom: 7.4vh;
   }
 }

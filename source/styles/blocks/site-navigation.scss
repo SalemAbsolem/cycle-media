@@ -19,12 +19,16 @@
     margin: 27.73vh 0 10.64vh;
   }
 
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     margin: 15.67vh 0 13.26vh;
   }
 
   @media #{$medium-desktop-only} {
-    margin: 22.8vh 0 15.54vh;
+    margin: 19.8vh 0 15.54vh;
+  }
+
+  @media #{$large-desktop-only} {
+    margin: 24.2vh 0 15.55vh;
   }
 }
 
@@ -40,8 +44,8 @@
       margin-bottom: 1.56vh;
     }
 
-    @media #{$small-desktop-only} {
-      margin-bottom: 1.5vh;
+    @media #{$desktop-only} {
+      margin-bottom: 15px;
     }
   }
 }
@@ -66,5 +70,13 @@
 
   @media #{$not-mobile} {
     font-size: 65px;
+  }
+
+  @media #{$medium-desktop-only} {
+    font-size: 80px;
+  }
+
+  @media #{$large-desktop-only} {
+    font-size: 100px;
   }
 }

@@ -80,6 +80,13 @@
 
     font-size: 40px;
   }
+
+  @media #{$large-desktop-only} {
+    max-width: 750px;
+    margin: 0 auto 14px;
+
+    font-size: 40px;
+  }
 }
 
 .footer__copyright {
@@ -95,6 +102,10 @@
   }
 
   @media #{$medium-desktop-only} {
+    margin: 0 auto;
+  }
+
+  @media #{$large-desktop-only} {
     margin: 0 auto;
   }
 }
@@ -128,6 +139,11 @@
     width: 265px;
     height: 44px;
   }
+
+  @media #{$large-desktop-only} {
+    width: 265px;
+    height: 44px;
+  }
 }
 
 .footer__contacts {
@@ -142,6 +158,10 @@
   margin: 0;
 
   @media #{$medium-desktop-only} {
+    margin-bottom: 20px;
+  }
+
+  @media #{$large-desktop-only} {
     margin-bottom: 20px;
   }
 }
