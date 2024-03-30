@@ -30,6 +30,7 @@ $large-desktop-only: "(min-width: #{$breakpoint-desktop-l})";
 // ИСКЛЮЧЕНИЯ
 $not-mobile: "(min-width: #{$breakpoint-tablet})";
 $not-desktop: "(max-width: #{$breakpoint-desktop-s - $breakpoint-gap})";
+$swiper: "(max-width: 1059.98px)";
 
 // ДВОЙНАЯ ПЛОТНОСТЬ
 $retina: "(min-resolution: 2dppx)";

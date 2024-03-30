@@ -40,12 +40,13 @@
     <link rel="preload" href="fonts/tt-wellingtons/tt-wellingtons-demibold-italic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <!-- Таблицы стилей -->
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   </head>
   <body class="page__body body">
     <header class="body__header header">
       <div class="header__page-menu page-menu">
-        <!-- если страница главная, то убрать href и ariacurrent page -->
-        <a class="page-menu__link" href="#" aria-current="page">
+        <!--++ если страница главная, то убрать href и ariacurrent page -->
+        <a class="page-menu__link" href="/" aria-current="page">
           <span class="visually-hidden">
             Перейти на главную страницу.
           </span>
@@ -61,16 +62,14 @@
         <p class="page-menu__scroll">
           {scroll
             <span class="page-menu__scroll-percent">
-              0
+              0%}
             </span>
-          %}
         </p>
         <p class="page-menu__time">
-          { spb
+          {spb
             <span class="page-menu__time-spb">
-              14:36
+              00:00}
             </span>
-          }
         </p>
         <!-- если js работать на будет то отправить на отдельную страницу с формой !!!ПОПАП С ФОРМОЙ ПРОСТОЙ!!! -->
         <a class="page-menu__form-button button button--open-form" href="#">
@@ -82,25 +81,22 @@
         <nav class="header__site-navigation site-navigation">
           <ul class="site-navigation__list">
             <li class="site-navigation__item">
-              <!-- к текущей странице добавить класс site-navigation__link current и ariacurrent page -->
-              <a class="site-navigation__link site-navigation__link--current" href="#" aria-current="page">
+              <!--++ к текущей странице добавить класс site-navigation__link current и ariacurrent page -->
+              <a class="site-navigation__link" href="/" aria-current="page">
                 главная
               </a>
             </li>
             <li class="site-navigation__item">
-              <!-- к текущей странице добавить класс site-navigation__link current и ariacurrent page -->
               <a class="site-navigation__link" href="#">
                 О нас
               </a>
             </li>
             <li class="site-navigation__item">
-              <!-- к текущей странице добавить класс site-navigation__link current и ariacurrent page -->
-              <a class="site-navigation__link" href="#">
+              <a class="site-navigation__link" href="/portfolio.html">
                 Работы
               </a>
             </li>
             <li class="site-navigation__item">
-              <!-- к текущей странице добавить класс site-navigation__link current и ariacurrent page -->
               <a class="site-navigation__link" href="#">
                 Услуги
               </a>
@@ -162,32 +158,40 @@
           </span>
         </h1>
         <span class="hero-section__decorate hero-section__decorate--section"></span>
-        <ul class="hero-section__adventages adventages">
-          <li class="adventages__item">
-            <h2 class="adventages__title">
-              Эффективность
-            </h2>
-            <p class="adventages__description">
-              Исследуем рынок и внедряем эффективные решения для твоего бизнеса
-            </p>
-          </li>
-          <li class="adventages__item">
-            <h2 class="adventages__title">
-              Индивидуальный подход
-            </h2>
-            <p class="adventages__description">
-              Каждый наш клиент уникален. Построим рабочие процессы так, чтобы тебе было комфортно
-            </p>
-          </li>
-          <li class="adventages__item">
-            <h2 class="adventages__title">
-              Уникальность
-            </h2>
-            <p class="adventages__description">
-              Помогаем выделиться на фоне конкурентов так, чтобы покупали именно у тебя
-            </p>
-          </li>
-        </ul>
+        <div class="swiper">
+          <ul class="hero-section__adventages adventages swiper-wrapper">
+            <li class="adventages__item swiper-slide">
+              <div class="adventages__wrap">
+                <h2 class="adventages__title">
+                  Эффективность
+                </h2>
+                <p class="adventages__description">
+                  Исследуем рынок и внедряем эффективные решения для твоего бизнеса
+                </p>
+              </div>
+            </li>
+            <li class="adventages__item swiper-slide">
+              <div class="adventages__wrap">
+                <h2 class="adventages__title">
+                  Индивидуальный подход
+                </h2>
+                <p class="adventages__description">
+                  Каждый наш клиент уникален. Построим рабочие процессы так, чтобы тебе было комфортно
+                </p>
+              </div>
+            </li>
+            <li class="adventages__item swiper-slide">
+              <div class="adventages__wrap">
+                <h2 class="adventages__title">
+                  Уникальность
+                </h2>
+                <p class="adventages__description">
+                  Помогаем выделиться на фоне конкурентов так, чтобы покупали именно у тебя
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
         <!-- если js работать на будет то отправить на отдельную страницу с формой !!!ЭТО КВИЗ!!! -->
       <a class="hero-section__form-button button button--open-quiz" href="#">
         узнать стоимость
@@ -404,7 +408,7 @@
         </p>
       </div>
       <div class="footer__column footer__column--left">
-        <!-- если страница главная, то убрать href и ariacurrent page -->
+        <!-- ++ если страница главная, то убрать href и ariacurrent page -->
         <a class="footer__link" href="#" aria-current="page">
           <span class="visually-hidden">
             Перейти на главную страницу.

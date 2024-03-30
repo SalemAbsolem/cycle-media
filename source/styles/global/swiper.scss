@@ -1,0 +1,28 @@
+.swiper {
+  position: relative;
+
+  overflow: hidden;
+
+  @media #{$swiper} {
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+
+      background-image: linear-gradient(to right, $black, transparent 15%), linear-gradient(to left, $black, transparent 15%);
+
+      pointer-events: none;
+    }
+
+    .swiper-slide {
+      opacity: 0.5;
+
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .swiper-slide-active {
+      opacity: 1;
+    }
+  }
+}

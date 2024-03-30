@@ -3,14 +3,13 @@
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 7.19vw;
   width: 100%;
 
-  overflow-x: clip;
+  overflow-x: visible;
 
-  // scrollbar-width: none;
-  @media #{$small-desktop-only} {
+  @media #{$desktop-only} {
     max-width: 1200px;
+    gap: 7.19vw;
   }
 
   @media #{$medium-desktop-only} {
@@ -28,7 +27,6 @@
   align-items: center;
   justify-content: center;
   min-width: 280px;
-  // transform: translateX(calc(-100% - 20px));
 
   @media #{$tablet-only} {
     min-width: 320px;
@@ -36,6 +34,23 @@
 
   @media #{$desktop-only} {
     min-width: 320px;
+  }
+}
+
+.adventages__wrap {
+  width: 270px;
+  margin: 0 auto;
+
+  @media #{$medium-mobile-only} {
+    width: 300px;
+  }
+
+  @media #{$tablet-only} {
+    width: 320px;
+  }
+
+  @media #{$desktop-only} {
+    width: unset;
   }
 }
 

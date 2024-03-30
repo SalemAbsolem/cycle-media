@@ -40,7 +40,7 @@
   text-align: center;
 
   @media #{$medium-mobile-only} {
-    margin: 5.12vh auto 4.88vh;
+    margin: 7.12vh auto 4.88vh;
 
     font-size: clamp(65px, 13vw, 108px);
     line-height: 48px;
@@ -81,8 +81,8 @@
 
 .hero-section__decorate {
   display: block;
-  width: 66.25vw;
-  height: 66.25vw;
+  width: clamp(212px, 40vw, 380px);
+  height: clamp(212px, 40vw, 380px);
   margin: 0 auto 4.73vh;
 
   background-image: url("../../images/icons/stack.svg#cycle-icon");
@@ -97,20 +97,20 @@
   }
 
   &.hero-section__decorate--section {
-    @media #{$not-mobile} {
+    @media #{$desktop-only} {
       display: none;
     }
   }
 
   @media #{$medium-mobile-only} {
-    width: 79.17vw;
-    height: 79.17vw;
+    width: clamp(380px, 75vw, 480px);
+    height: clamp(380px, 75vw, 480px);
     margin-bottom: 4.88vh;
   }
 
   @media #{$tablet-only} {
-    width: 63.41vw;
-    height: 63.41vw;
+    width: clamp(480px, 75vw, 480px);
+    height: clamp(480px, 75vw, 480px);
     margin-bottom: 4.59vh;
   }
 
@@ -153,7 +153,7 @@
 }
 
 .hero-section__adventages {
-  margin: 0 0 4.73vh;
+  margin: 2vh 0 4.73vh;
 
   @media #{$medium-mobile-only} {
     margin-bottom: 5.12vh;
