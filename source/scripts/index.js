@@ -116,7 +116,7 @@ for(let i = 0; i < menuButton.length; i++) {
   menuButton[i].addEventListener('click', () => {
     document.body.classList.toggle('body--stop-scrolling');
     if(!menuSite.classList.contains('header__menu--is-open')) {
-      menuSite.style.display = "block";
+      menuSite.style.display = "flex";
       setTimeout(() => {
         menuSite.classList.add('header__menu--is-open');
         page.classList.add('page--stop-scrolling');
@@ -132,4 +132,5 @@ for(let i = 0; i < menuButton.length; i++) {
     }
   });
 }
+
 /* eslint-enable */
