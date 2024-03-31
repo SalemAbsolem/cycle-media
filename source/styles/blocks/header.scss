@@ -14,11 +14,20 @@
   padding: 20px;
 
   background-color: rgba($black, 0.6);
+  opacity: 0;
 
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(0);
+
+  visibility: hidden;
+
+  transition: opacity 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   &.header__menu--is-open {
-    display: block;
+    opacity: 1;
+
+    backdrop-filter: blur(15px);
+
+    visibility: visible;
   }
 }
 

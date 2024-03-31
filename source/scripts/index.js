@@ -26,7 +26,7 @@ if(notDesktopBP.matches) {
     }
   });
 }
-/* eslint-enable */
+
 
 // отображение время в СПб
 const timeWrap = document.querySelector('.page-menu__time');
@@ -86,6 +86,26 @@ for(let i = 0; i < navLinks.length; i++) {
   }
 }
 
+// поворт крога логотипа
+const hoverMedia = window.matchMedia('(hover: hover)');
+
+let circle, rotate;
+
+if(!notDesktopBP.matches && hoverMedia.matches) {
+  circle = document.querySelector('.hero-section__decorate--title');
+  window.addEventListener('mousemove', (event) => {
+    const x = event.clientX - (circle.getBoundingClientRect().x + circle.getBoundingClientRect().width/2);
+    const y = event.clientY - (circle.getBoundingClientRect().y + circle.getBoundingClientRect().height/2);
+    const deg = 180 / Math.PI * Math.atan2(y, x);
+      if (deg <= 0) {
+          rotate = 360 + deg;
+      } else {
+          rotate = deg;
+      }
+    circle.style.transform = `rotate(${rotate}deg)`;
+  });
+}
+
 // открытие и закрытие меню
 const page = document.querySelector('.page');
 const menuButton = document.querySelectorAll('.button--toogle-menu');
@@ -95,13 +115,21 @@ for(let i = 0; i < menuButton.length; i++) {
   const menuText = menuButton[i].querySelector('.button__text');
   menuButton[i].addEventListener('click', () => {
     document.body.classList.toggle('body--stop-scrolling');
-    menuSite.classList.toggle('header__menu--is-open');
-    if(menuSite.classList.contains('header__menu--is-open')) {
-      page.classList.add('page--stop-scrolling');
-      menuText.textContent = 'закрыть';
+    if(!menuSite.classList.contains('header__menu--is-open')) {
+      menuSite.style.display = "block";
+      setTimeout(() => {
+        menuSite.classList.add('header__menu--is-open');
+        page.classList.add('page--stop-scrolling');
+        menuText.textContent = 'закрыть';
+      }, 100);
     } else {
+      setTimeout(() => {
+        menuSite.style.display = null;
+      }, 300);
+      menuSite.classList.remove('header__menu--is-open');
       page.classList.remove('page--stop-scrolling');
       menuText.textContent = 'меню?';
     }
   });
 }
+/* eslint-enable */
