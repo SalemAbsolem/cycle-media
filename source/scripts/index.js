@@ -1,5 +1,5 @@
 // убираем расширение страницы
-// history.pushState(null, null, window.location.pathname.replace('.html', ''));
+history.pushState(null, null, window.location.pathname.replace('index.html', ''));
 
 // swiper
 /* eslint-disable */
@@ -72,14 +72,14 @@ const currentPage = window.location.pathname;
 const navLinks = document.querySelectorAll('.site-navigation__link');
 
 for(let i = 0; i < logoLink.length; i++) {
-  if(currentPage === logoLink[i].href.replace(window.location.origin, '')) {
+  if(currentPage === logoLink[i].href.replace(window.location.origin, '') || (window.location.href.lastIndexOf('html') < 0 && window.location.href.lastIndexOf('index') < 0)) {
     logoLink[i].removeAttribute('href');
     logoLink[i].ariaCurrent = 'page';
   }
 }
 
 for(let i = 0; i < navLinks.length; i++) {
-  if(currentPage === navLinks[i].href.replace(window.location.origin, '')) {
+  if(currentPage === navLinks[i].href.replace(window.location.origin, '') || (navLinks[i].href.lastIndexOf('index.html') >= 0 && (window.location.href.lastIndexOf('html') < 0 && window.location.href.lastIndexOf('index') < 0))) {
     navLinks[i].removeAttribute('href');
     navLinks[i].classList.add('site-navigation__link--current');
     navLinks[i].ariaCurrent = 'page';
