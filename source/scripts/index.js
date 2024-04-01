@@ -104,6 +104,24 @@ if(!notDesktopBP.matches && hoverMedia.matches) {
     }
     circle.style.transform = `rotate(${rotate}deg)`;
   });
+} else {
+  circle = document.querySelector('.hero-section__decorate--section');
+  const slider = document.querySelector('.swiper-wrapper');
+  const slides = slider.querySelectorAll('.swiper-slide');
+
+  const observer = new MutationObserver((mutationRecords) => {
+    if(mutationRecords) {
+      for(let i = 0; i < slides.length; i++) {
+        if(slides[i].classList.contains('swiper-slide-active')) {
+          circle.style.transform = `rotate(${i * 60}deg)`;
+        }
+      }
+    }
+  });
+
+  observer.observe(slider, {
+    attributes: true,
+  });
 }
 
 // открытие и закрытие меню

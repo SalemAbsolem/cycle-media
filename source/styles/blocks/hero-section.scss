@@ -112,11 +112,36 @@
   }
 }
 
+.hero-section__decorate-wrap {
+  overflow: hidden;
+
+  @media #{$not-desktop} {
+    width: clamp(212px, 100%, 380px);
+    height: clamp(212px, 40%, 380px);
+    margin: auto auto min(9px, 50vh);
+  }
+
+  @media #{$medium-mobile-only} {
+    width: clamp(380px, 100%, 480px);
+    height: clamp(380px, 75%, 480px);
+    margin-bottom: min(4.88vh, 50vh);
+  }
+
+  @media #{$tablet-only} {
+    width: clamp(480px, 100%, 480px);
+    height: clamp(480px, 75%, 480px);
+    margin-bottom: 4.59vh;
+  }
+
+  @media #{$desktop-only} {
+    display: none;
+  }
+}
+
 .hero-section__decorate {
   display: block;
-  width: clamp(212px, 100%, 380px);
-  height: clamp(212px, 40%, 380px);
-  margin: auto auto min(9px, 50vh);
+  width: 100%;
+  height: 100%;
 
   background-image: url("../../images/icons/stack.svg#cycle-icon");
   background-size: contain;
@@ -130,21 +155,12 @@
   }
 
   &.hero-section__decorate--section {
+    transition: transform 1s ease-in-out;
+
     @media #{$desktop-only} {
       display: none;
+      transition: none;
     }
-  }
-
-  @media #{$medium-mobile-only} {
-    width: clamp(380px, 100%, 480px);
-    height: clamp(380px, 75%, 480px);
-    margin-bottom: min(4.88vh, 50vh);
-  }
-
-  @media #{$tablet-only} {
-    width: clamp(480px, 100%, 480px);
-    height: clamp(480px, 75%, 480px);
-    margin-bottom: 4.59vh;
   }
 
   @media #{$desktop-only} {
