@@ -26,7 +26,7 @@ if(notDesktopBP.matches) {
     }
   });
 }
-
+/* eslint-enable */
 
 // отображение время в СПб
 const timeWrap = document.querySelector('.page-menu__time');
@@ -94,14 +94,14 @@ let circle, rotate;
 if(!notDesktopBP.matches && hoverMedia.matches) {
   circle = document.querySelector('.hero-section__decorate--title');
   window.addEventListener('mousemove', (event) => {
-    const x = event.clientX - (circle.getBoundingClientRect().x + circle.getBoundingClientRect().width/2);
-    const y = event.clientY - (circle.getBoundingClientRect().y + circle.getBoundingClientRect().height/2);
+    const x = event.clientX - (circle.getBoundingClientRect().x + circle.getBoundingClientRect().width / 2);
+    const y = event.clientY - (circle.getBoundingClientRect().y + circle.getBoundingClientRect().height / 2);
     const deg = 180 / Math.PI * Math.atan2(y, x);
-      if (deg <= 0) {
-          rotate = 360 + deg;
-      } else {
-          rotate = deg;
-      }
+    if (deg <= 0) {
+      rotate = 360 + deg;
+    } else {
+      rotate = deg;
+    }
     circle.style.transform = `rotate(${rotate}deg)`;
   });
 }
@@ -116,7 +116,7 @@ for(let i = 0; i < menuButton.length; i++) {
   menuButton[i].addEventListener('click', () => {
     document.body.classList.toggle('body--stop-scrolling');
     if(!menuSite.classList.contains('header__menu--is-open')) {
-      menuSite.style.display = "flex";
+      menuSite.style.display = 'flex';
       setTimeout(() => {
         menuSite.classList.add('header__menu--is-open');
         page.classList.add('page--stop-scrolling');
@@ -125,12 +125,10 @@ for(let i = 0; i < menuButton.length; i++) {
     } else {
       setTimeout(() => {
         menuSite.style.display = null;
-      }, 300);
+      }, 1000);
       menuSite.classList.remove('header__menu--is-open');
       page.classList.remove('page--stop-scrolling');
       menuText.textContent = 'меню?';
     }
   });
 }
-
-/* eslint-enable */
