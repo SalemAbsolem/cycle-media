@@ -40,7 +40,6 @@
     <link rel="preload" href="fonts/tt-wellingtons/tt-wellingtons-demibold-italic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <!-- Таблицы стилей -->
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   </head>
   <body class="page__body body">
     <header class="body__header header">
@@ -72,8 +71,10 @@
             </span>
         </p>
         <!-- если js работать на будет то отправить на отдельную страницу с формой !!!ПОПАП С ФОРМОЙ ПРОСТОЙ!!! -->
-        <a class="page-menu__form-button button button--open-form" href="#">
-          хочу вас
+        <a class="page-menu__form-button button button--open-form" href="modal-form.html">
+          <span class="button__text">
+            хочу вас
+          </span>
         </a>
       </div>
       <!-- класс для открытия меню header__menu is-open -->
@@ -473,6 +474,69 @@
         </ul>
       </div>
     </footer>
+    <section class="body__modal-form modal-form">
+      <h2 class="visually-hidden">
+        Форма сбора заявок на консультацию
+      </h2>
+      <div class="modal-form__container">
+        <p class="modal-form__title">
+          давай пообщаемся с глазу на глаз и решим твою задачу
+        </p>
+        <form class="modal-form__lead-form lead-form" method="post" action="#" name="Форма сбора информации о проекте">
+          <label class="lead-form__label">
+            <span class="lead-form__label-text">
+              {имя}*
+            </span>
+            <span class="lead-form__input-wrapper">
+              <input class="lead-form__input lead-form__input--name" type="text" name="Имя" placeholder="xxxxxxxxxxx" data-required="true">
+              <span class="lead-form__input-error"></span>
+            </span>
+          </label>
+          <label class="lead-form__label">
+            <span class="lead-form__label-text">
+              {телефон}*
+            </span>
+            <span class="lead-form__input-wrapper">
+              <input class="lead-form__input lead-form__input--tel" type="tel" name="Телефон" placeholder="xxxxxxxxxxx" data-required="true">
+              <span class="lead-form__input-error"></span>
+            </span>
+          </label>
+          <label class="lead-form__label">
+            <span class="lead-form__label-text">
+              {Mail}*
+            </span>
+            <span class="lead-form__input-wrapper">
+              <input class="lead-form__input lead-form__input--email" type="email" name="Email" placeholder="xxxxxxxxxxx" data-required="true">
+              <span class="lead-form__input-error"></span>
+            </span>
+          </label>
+          <div class="lead-form__input-wrapper lead-form__input-wrapper--textarea">
+            <label class="lead-form__label" for="info">
+              <span class="lead-form__label-text">
+                {инфа о твоем проекте}
+              </span>
+            </label>
+            <textarea class="lead-form__input lead-form__input--textarea" name="Информация о проекте" id="info" placeholder="xxxxxxxxxxx" rows="2"></textarea>
+          </div>
+          <div class="lead-form__input-wrapper lead-form__input-wrapper--checkbox">
+            <input class="lead-form__input lead-form__input--checkbox visually-hidden" type="checkbox" name="Согласие на обработку данных" id="privacy" data-required="true">
+            <span class="lead-form__input-error"></span>
+            <label class="lead-form__label" for="privacy">
+              <span class="lead-form__toggle-icon">
+                {&emsp;}
+              </span>
+              Согласен(а) на
+            </label>
+            <a class="lead-form__checkbox-link" href="#">
+              обработку персональных данных
+            </a>
+          </div>
+          <button class="lead-form__button-submit button button--submit" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </section>
     <script src="scripts/index.js" defer></script>
   </body>
 </html>

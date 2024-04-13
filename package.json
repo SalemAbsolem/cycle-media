@@ -58,5 +58,9 @@
     "stylelint": "15.11.0",
     "stylelint-config-htmlacademy": "2.0.6",
     "w3c-html-validator": "1.6.1"
+  },
+  "dependencies": {
+    "libphonenumber-js": "1.10.60",
+    "swiper": "11.1.0"
   }
 }

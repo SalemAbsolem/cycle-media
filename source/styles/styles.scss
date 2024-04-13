@@ -5,6 +5,7 @@
 @import "./global/global.scss";
 @import "./global/swiper.scss";
 @import "./global/visually-hidden.scss";
+@import "./global/animation.scss";
 
 /* BLOCKS */
 // PAGE HEADER + BUTTON
@@ -31,3 +32,7 @@
 // PAGE FOOTER
 @import "./blocks/footer.scss";
 @import "./blocks/policy.scss";
+
+// MODAL AND FORM
+@import "./blocks/modal-form.scss";
+@import "./blocks/lead-form.scss";

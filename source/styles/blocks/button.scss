@@ -23,6 +23,8 @@
 
     font-family: inherit;
 
+    transition: transform 0.4s ease-in-out;
+
     @media #{$not-mobile} {
       font-size: 18px;
     }
@@ -35,6 +37,17 @@
       font-size: 30px;
     }
   }
+
+  @media (hover: hover) {
+    &:hover::before {
+      transform: translateX(-0.3em);
+    }
+
+    &:hover::after {
+      transform: translateX(0.3em);
+    }
+  }
+
   // &.button--toogle-menu {
 
   // }
@@ -100,6 +113,55 @@
 
     @media #{$large-desktop-only} {
       font-size: 35px;
+    }
+  }
+
+  &.button--submit {
+    font-size: 18px;
+    color: $black;
+
+    @media #{$tablet-only} {
+      font-size: 25px;
+
+      /* stylelint-disable max-nesting-depth */
+      &::before,
+      &::after {
+        font-size: 25px;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
+    @media #{$desktop-only} {
+      font-size: 25px;
+
+      /* stylelint-disable max-nesting-depth */
+      &::before,
+      &::after {
+        font-size: 25px;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
+    @media #{$medium-desktop-only} {
+      font-size: 30px;
+
+      /* stylelint-disable max-nesting-depth */
+      &::before,
+      &::after {
+        font-size: 30px;
+      }
+      /* stylelint-enable max-nesting-depth */
+    }
+
+    @media #{$large-desktop-only} {
+      font-size: 35px;
+
+      /* stylelint-disable max-nesting-depth */
+      &::before,
+      &::after {
+        font-size: 35px;
+      }
+      /* stylelint-enable max-nesting-depth */
     }
   }
 }

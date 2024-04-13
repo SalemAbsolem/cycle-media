@@ -200,7 +200,11 @@
 
 .hero-section__swiper {
   min-height: 90px;
-  margin-top: auto;
+  margin: auto -20px 0;
+
+  @media #{$swiper} {
+    cursor: grab;
+  }
 
   @media #{$medium-mobile-only} {
     min-height: 96px;
@@ -213,6 +217,8 @@
   @media #{$desktop-only} {
     min-height: unset;
     margin: 0;
+
+    cursor: auto;
   }
 }
 
