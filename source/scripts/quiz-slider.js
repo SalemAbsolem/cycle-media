@@ -1,5 +1,5 @@
 // data quiz
-import {devQuestions, devSiteQuestions, merketingQuestions, allOfThemQuestions} from './quiz-q.js';
+import {devQuestions, devSiteQuestions, devStyleQuestions, devBrandBookQuestions, devAllOfThemQuestions, marketingQuestions, marketingMarketingStrategyQuestions, marketingContentStrategyQuestions, marketingPromotionQuestions, marketingBrandbookQuestions, marketingAllOfThemQuestions, allOfThemQuestions} from './quiz-q.js';
 
 // quiz slide init
 import {initQuizSlide, removeQuizSlide} from './quiz-new-slide.js';
@@ -66,56 +66,296 @@ const quizSlider = () => {
         if(!quizNextGroup) {
           initQuizSlide(devQuestions, 'quiz');
         } else if(quizNextGroup.getAttribute('data-branch') !== devQuestions[0]['inValue']) {
-          removeQuizSlide(merketingQuestions, 'quiz');
+          removeQuizSlide(marketingQuestions, 'quiz');
           removeQuizSlide(allOfThemQuestions, 'quiz');
+
+          for(let i = 0; i < marketingMarketingStrategyQuestions.length; i++) {
+            removeQuizSlide(marketingMarketingStrategyQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < marketingContentStrategyQuestions.length; i++) {
+            removeQuizSlide(marketingContentStrategyQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < marketingPromotionQuestions.length; i++) {
+            removeQuizSlide(marketingPromotionQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < marketingBrandbookQuestions.length; i++) {
+            removeQuizSlide(marketingBrandbookQuestions[i], 'quiz');
+          }
+          removeQuizSlide(marketingAllOfThemQuestions, 'quiz');
 
           initQuizSlide(devQuestions, 'quiz');
         }
-      } else if(quizInputChecked && quizInputChecked.id === merketingQuestions[0]['inValue']) {
+      } else if(quizInputChecked && quizInputChecked.id === marketingQuestions[0]['inValue']) {
         if(!quizNextGroup) {
-          initQuizSlide(merketingQuestions, 'quiz');
-        } else if(quizNextGroup.getAttribute('data-branch') !== merketingQuestions[0]['inValue']) {
+          initQuizSlide(marketingQuestions, 'quiz');
+        } else if(quizNextGroup.getAttribute('data-branch') !== marketingQuestions[0]['inValue']) {
           removeQuizSlide(devQuestions, 'quiz');
           removeQuizSlide(allOfThemQuestions, 'quiz');
 
-          initQuizSlide(merketingQuestions, 'quiz');
+          for(let i = 0; i < devSiteQuestions.length; i++) {
+            removeQuizSlide(devSiteQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < devStyleQuestions.length; i++) {
+            removeQuizSlide(devStyleQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < devBrandBookQuestions.length; i++) {
+            removeQuizSlide(devBrandBookQuestions[i], 'quiz');
+          }
+          removeQuizSlide(devAllOfThemQuestions, 'quiz');
+
+          initQuizSlide(marketingQuestions, 'quiz');
         }
       } else if(quizInputChecked && quizInputChecked.id === allOfThemQuestions[0]['inValue']) {
         if(!quizNextGroup) {
           initQuizSlide(allOfThemQuestions, 'quiz');
         } else if(quizNextGroup.getAttribute('data-branch') !== allOfThemQuestions[0]['inValue']) {
           removeQuizSlide(devQuestions, 'quiz');
-          removeQuizSlide(merketingQuestions, 'quiz');
+          removeQuizSlide(marketingQuestions, 'quiz');
+
+          for(let i = 0; i < devSiteQuestions.length; i++) {
+            removeQuizSlide(devSiteQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < devStyleQuestions.length; i++) {
+            removeQuizSlide(devStyleQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < devBrandBookQuestions.length; i++) {
+            removeQuizSlide(devBrandBookQuestions[i], 'quiz');
+          }
+          removeQuizSlide(devAllOfThemQuestions, 'quiz');
+
+          for(let i = 0; i < marketingMarketingStrategyQuestions.length; i++) {
+            removeQuizSlide(marketingMarketingStrategyQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < marketingContentStrategyQuestions.length; i++) {
+            removeQuizSlide(marketingContentStrategyQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < marketingPromotionQuestions.length; i++) {
+            removeQuizSlide(marketingPromotionQuestions[i], 'quiz');
+          }
+          for(let i = 0; i < marketingBrandbookQuestions.length; i++) {
+            removeQuizSlide(marketingBrandbookQuestions[i], 'quiz');
+          }
+          removeQuizSlide(marketingAllOfThemQuestions, 'quiz');
 
           initQuizSlide(allOfThemQuestions, 'quiz');
         }
       }
-      // узнать текущую ветку, проверить и запустить формирование слайдов
+
       if((quizInputChecked && quizInputChecked.id === devSiteQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === devSiteQuestions[0][0]['inValue'])) {
+        for(let i = 0; i < devStyleQuestions.length; i++) {
+          removeQuizSlide(devStyleQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < devBrandBookQuestions.length; i++) {
+          removeQuizSlide(devBrandBookQuestions[i], 'quiz');
+        }
+        removeQuizSlide(devAllOfThemQuestions, 'quiz');
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== devSiteQuestions[0][0]['inValue']) {
+            generated = false;
+          }
+        }
         if(!generated) {
           for(let i = 0; i < devSiteQuestions.length; i++) {
             initQuizSlide(devSiteQuestions[i], 'quiz');
-            generated = true;
           }
+          generated = true;
         }
-      } else {
+      } else if((quizInputChecked && quizInputChecked.id === devStyleQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === devStyleQuestions[0][0]['inValue'])) {
         for(let i = 0; i < devSiteQuestions.length; i++) {
           removeQuizSlide(devSiteQuestions[i], 'quiz');
-          generated = false;
         }
+        for(let i = 0; i < devBrandBookQuestions.length; i++) {
+          removeQuizSlide(devBrandBookQuestions[i], 'quiz');
+        }
+        removeQuizSlide(devAllOfThemQuestions, 'quiz');
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== devStyleQuestions[0][0]['inValue']) {
+            generated = false;
+          }
+        }
+        if(!generated) {
+          for(let i = 0; i < devStyleQuestions.length; i++) {
+            initQuizSlide(devStyleQuestions[i], 'quiz');
+          }
+          generated = true;
+        }
+      } else if((quizInputChecked && quizInputChecked.id === devBrandBookQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === devBrandBookQuestions[0][0]['inValue'])) {
+        for(let i = 0; i < devSiteQuestions.length; i++) {
+          removeQuizSlide(devSiteQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < devStyleQuestions.length; i++) {
+          removeQuizSlide(devStyleQuestions[i], 'quiz');
+        }
+        removeQuizSlide(devAllOfThemQuestions, 'quiz');
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== devBrandBookQuestions[0][0]['inValue']) {
+            generated = false;
+          }
+        }
+        if(!generated) {
+          for(let i = 0; i < devBrandBookQuestions.length; i++) {
+            initQuizSlide(devBrandBookQuestions[i], 'quiz');
+          }
+          generated = true;
+        }
+      } else if((quizInputChecked && quizInputChecked.id === devAllOfThemQuestions[0]['inValue']) || (quizGroup.getAttribute('data-branch') === devAllOfThemQuestions[0]['inValue'])) {
+        for(let i = 0; i < devSiteQuestions.length; i++) {
+          removeQuizSlide(devSiteQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < devStyleQuestions.length; i++) {
+          removeQuizSlide(devStyleQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < devBrandBookQuestions.length; i++) {
+          removeQuizSlide(devBrandBookQuestions[i], 'quiz');
+        }
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== devAllOfThemQuestions[0]['inValue']) {
+            generated = false;
+          }
+        }
+        if(!generated) {
+          initQuizSlide(devAllOfThemQuestions, 'quiz');
+          generated = true;
+        }
+      } else {
+        generated = false;
+      }
+
+      if((quizInputChecked && quizInputChecked.id === marketingMarketingStrategyQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === marketingMarketingStrategyQuestions[0][0]['inValue'])) {
+        for(let i = 0; i < marketingContentStrategyQuestions.length; i++) {
+          removeQuizSlide(marketingContentStrategyQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingPromotionQuestions.length; i++) {
+          removeQuizSlide(marketingPromotionQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingBrandbookQuestions.length; i++) {
+          removeQuizSlide(marketingBrandbookQuestions[i], 'quiz');
+        }
+        removeQuizSlide(marketingAllOfThemQuestions, 'quiz');
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== marketingMarketingStrategyQuestions[0][0]['inValue']) {
+            generated = false;
+          }
+        }
+        if(!generated) {
+          for(let i = 0; i < marketingMarketingStrategyQuestions.length; i++) {
+            initQuizSlide(marketingMarketingStrategyQuestions[i], 'quiz');
+          }
+          generated = true;
+        }
+      } else if((quizInputChecked && quizInputChecked.id === marketingContentStrategyQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === marketingContentStrategyQuestions[0][0]['inValue'])) {
+        for(let i = 0; i < marketingMarketingStrategyQuestions.length; i++) {
+          removeQuizSlide(marketingMarketingStrategyQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingPromotionQuestions.length; i++) {
+          removeQuizSlide(marketingPromotionQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingBrandbookQuestions.length; i++) {
+          removeQuizSlide(marketingBrandbookQuestions[i], 'quiz');
+        }
+        removeQuizSlide(marketingAllOfThemQuestions, 'quiz');
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== marketingContentStrategyQuestions[0][0]['inValue']) {
+            generated = false;
+          }
+        }
+        if(!generated) {
+          for(let i = 0; i < marketingContentStrategyQuestions.length; i++) {
+            initQuizSlide(marketingContentStrategyQuestions[i], 'quiz');
+          }
+          generated = true;
+        }
+      } else if((quizInputChecked && quizInputChecked.id === marketingPromotionQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === marketingPromotionQuestions[0][0]['inValue'])) {
+        for(let i = 0; i < marketingMarketingStrategyQuestions.length; i++) {
+          removeQuizSlide(marketingMarketingStrategyQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingContentStrategyQuestions.length; i++) {
+          removeQuizSlide(marketingContentStrategyQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingBrandbookQuestions.length; i++) {
+          removeQuizSlide(marketingBrandbookQuestions[i], 'quiz');
+        }
+        removeQuizSlide(marketingAllOfThemQuestions, 'quiz');
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== marketingPromotionQuestions[0][0]['inValue']) {
+            generated = false;
+          }
+        }
+        if(!generated) {
+          for(let i = 0; i < marketingPromotionQuestions.length; i++) {
+            initQuizSlide(marketingPromotionQuestions[i], 'quiz');
+          }
+          generated = true;
+        }
+      } else if((quizInputChecked && quizInputChecked.id === marketingBrandbookQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === marketingBrandbookQuestions[0][0]['inValue'])) {
+        for(let i = 0; i < marketingMarketingStrategyQuestions.length; i++) {
+          removeQuizSlide(marketingMarketingStrategyQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingContentStrategyQuestions.length; i++) {
+          removeQuizSlide(marketingContentStrategyQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingPromotionQuestions.length; i++) {
+          removeQuizSlide(marketingPromotionQuestions[i], 'quiz');
+        }
+        removeQuizSlide(marketingAllOfThemQuestions, 'quiz');
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== marketingBrandbookQuestions[0][0]['inValue']) {
+            generated = false;
+          }
+        }
+        if(!generated) {
+          for(let i = 0; i < marketingBrandbookQuestions.length; i++) {
+            initQuizSlide(marketingBrandbookQuestions[i], 'quiz');
+          }
+          generated = true;
+        }
+      } else if((quizInputText && quizInputText.value && quizInputText.id === marketingAllOfThemQuestions[0]['inValue']) || (quizGroup.getAttribute('data-branch') === marketingAllOfThemQuestions[0]['inValue'])) {
+        for(let i = 0; i < marketingMarketingStrategyQuestions.length; i++) {
+          removeQuizSlide(marketingMarketingStrategyQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingContentStrategyQuestions.length; i++) {
+          removeQuizSlide(marketingContentStrategyQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingPromotionQuestions.length; i++) {
+          removeQuizSlide(marketingPromotionQuestions[i], 'quiz');
+        }
+        for(let i = 0; i < marketingBrandbookQuestions.length; i++) {
+          removeQuizSlide(marketingBrandbookQuestions[i], 'quiz');
+        }
+        if(quizNextGroup) {
+          if(quizNextGroup.getAttribute('data-branch') !== marketingAllOfThemQuestions[0]['inValue']) {
+            generated = false;
+          }
+        }
+        if(!generated) {
+          initQuizSlide(marketingAllOfThemQuestions, 'quiz');
+          generated = true;
+        }
+      } else {
+        generated = false;
       }
 
       slider.updateProgress();
       slider.updateSlides();
       slider.slideNext();
 
+      /*else {
+        for(let i = 0; i < devSiteQuestions.length; i++) {
+          removeQuizSlide(devSiteQuestions[i], 'quiz');
+        }
+        generated = false;
+      }*/
+
       // quizLength = quiz.querySelectorAll('.quiz__group').length - 1;
-      // if(quizNextGroup) {
-      //   if(quizNextGroup.getAttribute('data-branch') !== allOfThemQuestions[0]['inValue']) {
-      //   // if(slider.activeIndex === quizLength) {
-      //     nextQ.classList.add('button--disabled');
+      // if(slider.activeIndex === quizLength && slider.activeIndex >= 1) {
+      //   console.log(quizNextGroup)
+      //   if(!quizNextGroup) {
+      //     if(quizNextGroup.getAttribute('data-branch') === allOfThemQuestions[0]['inValue']) {
+      //       nextQ.classList.add('button--disabled');
+      //     }
       //   }
       // }
+
       formValidating('#quiz');
     } else {
       for(let i = 0; i < quizToggle.length; i++) {
@@ -124,12 +364,7 @@ const quizSlider = () => {
       if (quizInputText) {
         quizInputText.classList.add('input-group__input--text-error');
       }
-      /* eslint-disable no-alert */
-      // alert('Выберите хотя бы один пункт');
-      /* eslint-enable no-alert */
     }
-
-    // console.log(quizAnswer);
   });
 
 

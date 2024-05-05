@@ -445,7 +445,514 @@ const devSiteQuestions = [
   ]
 ];
 
-const merketingQuestions = [
+const devStyleQuestions = [
+  [
+    {
+      'title': 'У тебя уже есть фирменный стиль?',
+      'inValue': 'style-development',
+      'outValue': 'has-style',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'redesign',
+      'value': 'Есть. Нужен редизайн',
+      'question': {
+        'primary-text': 'Да, но необходим редизайн',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'development',
+      'value': 'Нет. Нужно с нуля',
+      'question': {
+        'primary-text': 'нет, нужен фирменный стиль с нуля',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'уНИКАЛЬНЫЙ СЛУЧАЙ? МОЖНО ОПИСАТЬ ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Какие носители необходимо оформить?',
+      'inValue': 'style-development',
+      'outValue': 'carriers',
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'basa',
+      'value': 'Базовый',
+      'question': {
+        'primary-text': 'Базовый набор:',
+        'secondary-text': 'визитка, блокнот, бланк, ручка, бейдж, кружка и другая канцелярия'
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'site',
+      'value': 'Сайт',
+      'question': {
+        'primary-text': 'Сайт',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'social',
+      'value': 'Cоциальные сети',
+      'question': {
+        'primary-text': 'социальные сети',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'presentation',
+      'value': 'Презентация',
+      'question': {
+        'primary-text': 'Презентация',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'place',
+      'value': 'Пространство',
+      'question': {
+        'primary-text': 'пространство',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'adv',
+      'value': 'Рекламные материалы',
+      'question': {
+        'primary-text': 'Рекламные материалы',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'print',
+      'value': 'Печатная продукция',
+      'question': {
+        'primary-text': 'Печатная продукция',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'Что то еще ? МОЖНО дописать ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'опиши нишу и расскажи о компании',
+      'inValue': 'style-development',
+      'outValue': 'target',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'target',
+      'value': 'Ниша компании',
+      'question': {
+        'primary-text': 'Глэмпинг в выборге, посуточная аренда...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'тебя уже есть тз<br>поделись им здесь',
+      'inValue': 'style-development',
+      'outValue': 'tz',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'tz',
+      'value': 'ТЗ',
+      'question': {
+        'primary-text': 'офрмление пространства глэмпинга...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Почти все!<br><br>Есть ли ограничения по бюджету?',
+      'inValue': 'style-development',
+      'outValue': 'money-count',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '100',
+      'value': '100',
+      'question': {
+        'primary-text': 'до 100 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '100-250',
+      'value': '100-250',
+      'question': {
+        'primary-text': 'От 100 000 - 250 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '250-500',
+      'value': '250-500',
+      'question': {
+        'primary-text': 'От 250 000 - 500 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'more-500',
+      'value': 'Больше 500',
+      'question': {
+        'primary-text': 'Более - 500 000',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Ура! мы сделали это!<br><br>оставь контакт, мы отправим коммерческое предложение',
+      'inValue': 'style-development',
+      'outValue': 'final-form',
+    }
+  ]
+];
+
+const devBrandBookQuestions = [
+  [
+    {
+      'title': 'У тебя уже есть брендбук?',
+      'inValue': 'brandbook-development',
+      'outValue': 'has-brandbook',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'redesign',
+      'value': 'Есть. Нужен ребрендинг',
+      'question': {
+        'primary-text': 'Да, но необходим ребрендинг',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'development',
+      'value': 'Нет. Нужно с нуля',
+      'question': {
+        'primary-text': 'нет, нужен брендбук с нуля',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'уНИКАЛЬНЫЙ СЛУЧАЙ? МОЖНО ОПИСАТЬ ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'бренд-стратегия нужна мне, чтобы:',
+      'inValue': 'brandbook-development',
+      'outValue': 'strategy',
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'posotion',
+      'value': 'Позиционирование',
+      'question': {
+        'primary-text': 'у меня появилось позиционирование',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'content',
+      'value': 'Контент',
+      'question': {
+        'primary-text': 'стало понятно, как продавать через контент',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'competitors',
+      'value': 'Конкуренты',
+      'question': {
+        'primary-text': 'мой бренд выделялся среди конкурентов',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'had-style',
+      'value': 'Был стиль',
+      'question': {
+        'primary-text': 'у меня был свой фир.стиль',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'more-sell',
+      'value': 'Больше платить',
+      'question': {
+        'primary-text': 'люди были готовы больше платить за мой продукт',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'есть другие пожелания? поделись ими с нами...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Какие носители необходимо оформить?',
+      'inValue': 'brandbook-development',
+      'outValue': 'carriers',
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'basa',
+      'value': 'Базовый',
+      'question': {
+        'primary-text': 'Базовый набор:',
+        'secondary-text': 'визитка, блокнот, бланк, ручка, бейдж, кружка и другая канцелярия'
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'site',
+      'value': 'Сайт',
+      'question': {
+        'primary-text': 'Сайт',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'social',
+      'value': 'Cоциальные сети',
+      'question': {
+        'primary-text': 'социальные сети',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'presentation',
+      'value': 'Презентация',
+      'question': {
+        'primary-text': 'Презентация',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'place',
+      'value': 'Пространство',
+      'question': {
+        'primary-text': 'пространство',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'adv',
+      'value': 'Рекламные материалы',
+      'question': {
+        'primary-text': 'Рекламные материалы',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'print',
+      'value': 'Печатная продукция',
+      'question': {
+        'primary-text': 'Печатная продукция',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'Что то еще ? МОЖНО дописать ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'опиши нишу и расскажи о компании',
+      'inValue': 'brandbook-development',
+      'outValue': 'target',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'target',
+      'value': 'Ниша компании',
+      'question': {
+        'primary-text': 'Глэмпинг в выборге, посуточная аренда...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'тебя уже есть тз<br>поделись им здесь',
+      'inValue': 'brandbook-development',
+      'outValue': 'tz',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'tz',
+      'value': 'ТЗ',
+      'question': {
+        'primary-text': 'офрмление пространства глэмпинга...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Почти все!<br><br>Есть ли ограничения по бюджету?',
+      'inValue': 'brandbook-development',
+      'outValue': 'money-count',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '100',
+      'value': '100',
+      'question': {
+        'primary-text': 'до 100 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '100-250',
+      'value': '100-250',
+      'question': {
+        'primary-text': 'От 100 000 - 250 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '250-500',
+      'value': '250-500',
+      'question': {
+        'primary-text': 'От 250 000 - 500 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'more-500',
+      'value': 'Больше 500',
+      'question': {
+        'primary-text': 'Более - 500 000',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Ура! мы сделали это!<br><br>оставь контакт, мы отправим коммерческое предложение',
+      'inValue': 'brandbook-development',
+      'outValue': 'final-form',
+    }
+  ]
+];
+
+const devAllOfThemQuestions = [
+  {
+    'title': 'Давай пообщаемся, мы обязательно найдем решение',
+    'inValue': 'all-of-them-development',
+    'outValue': 'final-form',
+  }
+];
+
+const marketingQuestions = [
   {
     'title': 'Что тебя интересует?',
     'inValue': 'marketing',
@@ -498,12 +1005,587 @@ const merketingQuestions = [
   {
     'input': 'text',
     'required': false,
-    'brunch': 'unicorn',
+    'brunch': 'all-of-them',
     'value': 'Особенный',
     'question': {
       'primary-text': 'уНИКАЛЬНЫЙ СЛУЧАЙ? МОЖНО ОПИСАТЬ ТУТ...',
     },
     'image': false
+  }
+];
+
+const marketingMarketingStrategyQuestions = [
+  [
+    {
+      'title': 'опиши нишу и расскажи о компании',
+      'inValue': 'marketing-strategy-strategy',
+      'outValue': 'target',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'target',
+      'value': 'Ниша компании',
+      'question': {
+        'primary-text': 'Глэмпинг в выборге, посуточная аренда...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Для чего тебе нужна стратегия?',
+      'inValue': 'marketing-strategy-strategy',
+      'outValue': 'strategy',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'scale',
+      'value': 'Расширение',
+      'question': {
+        'primary-text': 'расширение компании / блога',
+        'secondary-text': 'Что мне нужно для этого сделать?'
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'more-sell',
+      'value': 'Продажи',
+      'question': {
+        'primary-text': 'Хочу больше продаж',
+        'secondary-text': 'как продавать, где продавать, как сделать, чтобы клиенты возвращались?'
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'price-lead',
+      'value': 'Стоимость лида',
+      'question': {
+        'primary-text': 'Хочу знать, сколько стоит лид',
+        'secondary-text': 'было бы круто понимать, как снизить стоимость текущих заявок и сколько их потребуется для оборота N $'
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'startup',
+      'value': 'Стартап',
+      'question': {
+        'primary-text': 'У меня стартап. Помогите!',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'уНИКАЛЬНЫЙ СЛУЧАЙ? МОЖНО ОПИСАТЬ ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Ура! мы сделали это!<br><br>оставь контакт, мы отправим коммерческое предложение',
+      'inValue': 'marketing-strategy-strategy',
+      'outValue': 'final-form',
+    }
+  ]
+];
+
+const marketingContentStrategyQuestions = [
+  [
+    {
+      'title': 'У тебя уже есть брендбук?',
+      'inValue': 'content-strategy-strategy',
+      'outValue': 'target',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'target',
+      'value': 'Ниша компании',
+      'question': {
+        'primary-text': 'Глэмпинг в выборге, посуточная аренда...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Для чего тебе нужна стратегия?',
+      'inValue': 'content-strategy-strategy',
+      'outValue': 'strategy',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'followers',
+      'value': 'Подписчики',
+      'question': {
+        'primary-text': 'Мне нужно больше подписчиков',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'sell-service',
+      'value': 'Продажа услуг',
+      'question': {
+        'primary-text': 'Я продаю свои услуги',
+        'secondary-text': 'хочу продвигаться с помощью контента. Что делать?'
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'activity',
+      'value': 'Вовлеченность',
+      'question': {
+        'primary-text': 'повысить вовлеченность',
+        'secondary-text': 'нужно больше лайков, комментариев и реакций на постах'
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'уНИКАЛЬНЫЙ СЛУЧАЙ? МОЖНО ОПИСАТЬ ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Ура! мы сделали это!<br><br>оставь контакт, мы отправим коммерческое предложение',
+      'inValue': 'content-strategy-strategy',
+      'outValue': 'final-form',
+    }
+  ]
+];
+
+const marketingPromotionQuestions = [
+  [
+    {
+      'title': 'У тебя уже есть брендбук?',
+      'inValue': 'promotion-strategy',
+      'outValue': 'target',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'target',
+      'value': 'Ниша компании',
+      'question': {
+        'primary-text': 'Глэмпинг в выборге, посуточная аренда...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Какой вид рекламы ты рассматриваешь?',
+      'inValue': 'promotion-strategy',
+      'outValue': 'type-adv',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'target',
+      'value': 'Таргет',
+      'question': {
+        'primary-text': 'Таргетированная реклама',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'yandex',
+      'value': 'Яндекс',
+      'question': {
+        'primary-text': 'реклама в Яндекс',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'smm',
+      'value': 'SMM',
+      'question': {
+        'primary-text': 'SMM',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'all',
+      'value': 'Всё',
+      'question': {
+        'primary-text': 'Все вместе',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Какой результат рекламы ты хочешь получить',
+      'inValue': 'promotion-strategy',
+      'outValue': 'result-adv',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'sell',
+      'value': 'Продажи',
+      'question': {
+        'primary-text': 'Продажи',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'followers',
+      'value': 'Подписчики',
+      'question': {
+        'primary-text': 'Подписчики',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'reach',
+      'value': 'Охват',
+      'question': {
+        'primary-text': 'Узнаваемость (охват)',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'уНИКАЛЬНЫЙ СЛУЧАЙ? МОЖНО ОПИСАТЬ ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Ура! мы сделали это!<br><br>оставь контакт, мы отправим коммерческое предложение',
+      'inValue': 'promotion-strategy',
+      'outValue': 'final-form',
+    }
+  ]
+];
+
+const marketingBrandbookQuestions = [
+  [
+    {
+      'title': 'У тебя уже есть брендбук?',
+      'inValue': 'brandbook-strategy',
+      'outValue': 'has-brandbook',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'redesign',
+      'value': 'Есть. Нужен ребрендинг',
+      'question': {
+        'primary-text': 'Да, но необходим ребрендинг',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'development',
+      'value': 'Нет. Нужно с нуля',
+      'question': {
+        'primary-text': 'нет, нужен брендбук с нуля',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'уНИКАЛЬНЫЙ СЛУЧАЙ? МОЖНО ОПИСАТЬ ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'бренд-стратегия нужна мне, чтобы:',
+      'inValue': 'brandbook-strategy',
+      'outValue': 'strategy',
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'posotion',
+      'value': 'Позиционирование',
+      'question': {
+        'primary-text': 'у меня появилось позиционирование',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'content',
+      'value': 'Контент',
+      'question': {
+        'primary-text': 'стало понятно, как продавать через контент',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'competitors',
+      'value': 'Конкуренты',
+      'question': {
+        'primary-text': 'мой бренд выделялся среди конкурентов',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'had-style',
+      'value': 'Был стиль',
+      'question': {
+        'primary-text': 'у меня был свой фир.стиль',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'more-sell',
+      'value': 'Больше платить',
+      'question': {
+        'primary-text': 'люди были готовы больше платить за мой продукт',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'есть другие пожелания? поделись ими с нами...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Какие носители необходимо оформить?',
+      'inValue': 'brandbook-strategy',
+      'outValue': 'carriers',
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'basa',
+      'value': 'Базовый',
+      'question': {
+        'primary-text': 'Базовый набор:',
+        'secondary-text': 'визитка, блокнот, бланк, ручка, бейдж, кружка и другая канцелярия'
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'site',
+      'value': 'Сайт',
+      'question': {
+        'primary-text': 'Сайт',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'social',
+      'value': 'Cоциальные сети',
+      'question': {
+        'primary-text': 'социальные сети',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'presentation',
+      'value': 'Презентация',
+      'question': {
+        'primary-text': 'Презентация',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'place',
+      'value': 'Пространство',
+      'question': {
+        'primary-text': 'пространство',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'adv',
+      'value': 'Рекламные материалы',
+      'question': {
+        'primary-text': 'Рекламные материалы',
+      },
+      'image': false
+    },
+    {
+      'input': 'checkbox',
+      'required': true,
+      'brunch': 'print',
+      'value': 'Печатная продукция',
+      'question': {
+        'primary-text': 'Печатная продукция',
+      },
+      'image': false
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'unicorn',
+      'value': 'Особенный',
+      'question': {
+        'primary-text': 'Что то еще ? МОЖНО дописать ТУТ...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'опиши нишу и расскажи о компании',
+      'inValue': 'brandbook-strategy',
+      'outValue': 'target',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'target',
+      'value': 'Ниша компании',
+      'question': {
+        'primary-text': 'Глэмпинг в выборге, посуточная аренда...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'тебя уже есть тз<br>поделись им здесь',
+      'inValue': 'brandbook-strategy',
+      'outValue': 'tz',
+    },
+    {
+      'input': 'text',
+      'required': false,
+      'brunch': 'tz',
+      'value': 'ТЗ',
+      'question': {
+        'primary-text': 'офрмление пространства глэмпинга...',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Почти все!<br><br>Есть ли ограничения по бюджету?',
+      'inValue': 'brandbook-strategy',
+      'outValue': 'money-count',
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '100',
+      'value': '100',
+      'question': {
+        'primary-text': 'до 100 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '100-250',
+      'value': '100-250',
+      'question': {
+        'primary-text': 'От 100 000 - 250 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': '250-500',
+      'value': '250-500',
+      'question': {
+        'primary-text': 'От 250 000 - 500 000',
+      },
+      'image': false
+    },
+    {
+      'input': 'radio',
+      'required': true,
+      'brunch': 'more-500',
+      'value': 'Больше 500',
+      'question': {
+        'primary-text': 'Более - 500 000',
+      },
+      'image': false
+    }
+  ],
+  [
+    {
+      'title': 'Ура! мы сделали это!<br><br>оставь контакт, мы отправим коммерческое предложение',
+      'inValue': 'brandbook-strategy',
+      'outValue': 'final-form',
+    }
+  ]
+];
+
+const marketingAllOfThemQuestions = [
+  {
+    'title': 'Давай пообщаемся, мы обязательно найдем решение',
+    'inValue': 'all-of-them-strategy',
+    'outValue': 'final-form',
   }
 ];
 
@@ -515,4 +1597,4 @@ const allOfThemQuestions = [
   }
 ];
 
-export {devQuestions, devSiteQuestions, merketingQuestions, allOfThemQuestions};
+export {devQuestions, devSiteQuestions, devStyleQuestions, devBrandBookQuestions, devAllOfThemQuestions, marketingQuestions, marketingMarketingStrategyQuestions, marketingContentStrategyQuestions, marketingPromotionQuestions, marketingBrandbookQuestions, marketingAllOfThemQuestions, allOfThemQuestions};

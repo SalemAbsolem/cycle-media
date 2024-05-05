@@ -72,7 +72,7 @@ const formValidating = (selectorForm) => {
     const inputsEmailError = forms[i].querySelectorAll('input[type="email"][data-required="true"] + [class*="__input-error"]');
     const inputsPhone = forms[i].querySelectorAll('input[type="tel"][data-required="true"]');
     const inputsPhoneError = forms[i].querySelectorAll('input[type="tel"][data-required="true"] + [class*="__input-error"]');
-    const inputsCheckbox = forms[i].querySelectorAll('input[type="checkbox"][data-required="true"]');
+    const inputsCheckbox = forms[i].querySelectorAll('input[type="checkbox"][data-required="true"]:not([class*="input-group"])');
     const inputsCheckboxError = forms[i].querySelectorAll('input[type="checkbox"][data-required="true"] + [class*="__input-error"]');
     const inputs = [inputsText, inputsEmail, inputsPhone];
     const inputError = [inputsTextError, inputsEmailError, inputsPhoneError];
@@ -137,7 +137,7 @@ const formValidating = (selectorForm) => {
           const parentCheckbox = inputsCheckbox[q].parentElement;
           const toggleIconCheckbox = parentCheckbox.querySelector('[class*="__toggle-icon"]');
           const labelCheckbox = parentCheckbox.querySelector('[class*="__label"]');
-          const linkCheckbox = parentCheckbox.querySelector('[class*="__checkbox-link"]');
+          const linkCheckbox = forms[i].querySelector('[class*="__checkbox-link"]');
           if(!inputsCheckbox[q].checked) {
             e.preventDefault();
             toggleIconCheckbox.style.color = '#ff0000';
