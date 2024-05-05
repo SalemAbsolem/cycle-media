@@ -55,7 +55,7 @@ const quizSlider = () => {
 
     quizToggle = quizGroup.querySelectorAll('.input-group__toggle-icon');
 
-    if(quizInputChecked || (!quizInputChecked && quizInputText.value)) {
+    if(quizInputChecked || (!quizInputChecked && quizInputText && quizInputText.value)) {
       for(let i = 0; i < quizToggle.length; i++) {
         quizToggle[i].classList.remove('input-group__toggle-icon--error');
       }
@@ -125,7 +125,7 @@ const quizSlider = () => {
         quizInputText.classList.add('input-group__input--text-error');
       }
       /* eslint-disable no-alert */
-      alert('Выберите хотя бы один пункт');
+      // alert('Выберите хотя бы один пункт');
       /* eslint-enable no-alert */
     }
 
