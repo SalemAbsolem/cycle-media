@@ -1,9 +1,9 @@
 .page {
   min-height: 100vh;
 
-  &.page--stop-scrolling {
-    scrollbar-gutter: auto;
-  }
+  // &.page--stop-scrolling {
+  //   scrollbar-gutter: stable;
+  // }
 }
 
 // .page__body {
