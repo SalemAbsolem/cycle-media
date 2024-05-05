@@ -1,0 +1,1 @@
+var r=()=>{let t=document.querySelector(".page-menu__time");if(!t)return;let n=t.querySelector(".page-menu__time-spb");setInterval(()=>{let o=new Date,s=o.getUTCHours()+3,e=o.getMinutes();e<10?n.textContent=`${s}:0${e}}`:n.textContent=`${s}:${e}}`},1e3)};export{r as timeSPBFunc};
