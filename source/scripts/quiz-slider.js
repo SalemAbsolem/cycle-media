@@ -38,14 +38,25 @@ const quizSlider = () => {
 
   const quiz = sliderQuiz.querySelector('.quiz');
   let quizGroup, quizInputChecked, quizNextGroup, quizInputText, quizToggle;
-  let generated = false;
+  let generated;
 
   qStartBtn.addEventListener('click', () => {
     slider.slideNext();
     nextQ.classList.remove('button--disabled');
     prevQ.classList.remove('button--disabled');
   });
+  let lastClicked;
 
+  document.addEventListener('click', (e) => {
+    if(e.target.classList.contains('input-group__input')) {
+      if(e.target.id === lastClicked) {
+        e.target.checked = false;
+        lastClicked = null;
+      } else {
+        lastClicked = e.target.id;
+      }
+    }
+  });
 
   nextQ.addEventListener('click', () => {
     quizGroup = quiz.querySelector('.quiz__group.swiper-slide-active');
@@ -217,11 +228,7 @@ const quizSlider = () => {
           initQuizSlide(devAllOfThemQuestions, 'quiz');
           generated = true;
         }
-      } else {
-        generated = false;
-      }
-
-      if((quizInputChecked && quizInputChecked.id === marketingMarketingStrategyQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === marketingMarketingStrategyQuestions[0][0]['inValue'])) {
+      } else if((quizInputChecked && quizInputChecked.id === marketingMarketingStrategyQuestions[0][0]['inValue']) || (quizGroup.getAttribute('data-branch') === marketingMarketingStrategyQuestions[0][0]['inValue'])) {
         for(let i = 0; i < marketingContentStrategyQuestions.length; i++) {
           removeQuizSlide(marketingContentStrategyQuestions[i], 'quiz');
         }
@@ -339,17 +346,10 @@ const quizSlider = () => {
       slider.updateSlides();
       slider.slideNext();
 
-      /*else {
-        for(let i = 0; i < devSiteQuestions.length; i++) {
-          removeQuizSlide(devSiteQuestions[i], 'quiz');
-        }
-        generated = false;
-      }*/
-
       // quizLength = quiz.querySelectorAll('.quiz__group').length - 1;
       // if(slider.activeIndex === quizLength && slider.activeIndex >= 1) {
       //   console.log(quizNextGroup)
-      //   if(!quizNextGroup) {
+      //   if(!quizNextGroup && generated) {
       //     if(quizNextGroup.getAttribute('data-branch') === allOfThemQuestions[0]['inValue']) {
       //       nextQ.classList.add('button--disabled');
       //     }

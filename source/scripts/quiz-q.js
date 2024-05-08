@@ -1104,7 +1104,7 @@ const marketingMarketingStrategyQuestions = [
 const marketingContentStrategyQuestions = [
   [
     {
-      'title': 'У тебя уже есть брендбук?',
+      'title': 'укажи нишу и расскажи о компании',
       'inValue': 'content-strategy-strategy',
       'outValue': 'target',
     },
@@ -1180,7 +1180,7 @@ const marketingContentStrategyQuestions = [
 const marketingPromotionQuestions = [
   [
     {
-      'title': 'У тебя уже есть брендбук?',
+      'title': 'укажи нишу и расскажи о компании',
       'inValue': 'promotion-strategy',
       'outValue': 'target',
     },
