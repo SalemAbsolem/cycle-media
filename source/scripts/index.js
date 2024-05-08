@@ -1,6 +1,7 @@
 // константы
 const notDesktopBP = window.matchMedia('(max-width: 1059.98px)');
 const hoverMedia = window.matchMedia('(hover: hover)');
+const windowHeight = window.innerHeight;
 
 // убираем расширение страницы
 // history.pushState(null, null, window.location.pathname.replace('index.html', ''));
@@ -80,3 +81,6 @@ if(openPopupFormButton) {
 // валидация форм
 import {formValidating} from './form-validation.js';
 formValidating();
+
+import {portfolioItemOnFocus} from './smooth-portfolio.js';
+portfolioItemOnFocus(windowHeight);
