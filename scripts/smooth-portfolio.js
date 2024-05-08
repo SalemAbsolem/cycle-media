@@ -1,0 +1,1 @@
+var l=e=>{let o=document.querySelectorAll(".portfolio__link");if(o)for(let t=0;t<o.length;t++)window.addEventListener("scroll",()=>{e/2>=o[t].getBoundingClientRect().top&&e/2*-1<=o[t].getBoundingClientRect().top?o[t].classList.add("portfolio__link--on-focus"):o[t].classList.remove("portfolio__link--on-focus")})};export{l as portfolioItemOnFocus};
