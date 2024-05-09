@@ -12,18 +12,29 @@ const antiGravityCloud = (hoverMedia) => {
   let forcey = 0;
   const magnet = 1000;
 
-  let el, x0, x1, y0, y1, distancex, distancey, distance, powerx, powery;
+  let el, x0, x1, y0, y1, distancex, distancey, distance, powerx, powery, evt;
 
   if(hoverMedia.matches) {
     servicesBlock.addEventListener('mousemove', (e) => {
       mouse = {'x': e.offsetX, 'y': e.offsetY};
     });
   } else {
+    // servicesBlock.addEventListener('touchstart', (e) => {
+    //   mouse = {'x': e.offsetX, 'y': e.offsetY};
+    // });
+    // servicesBlock.addEventListener('touched', (e) => {
+    //   mouse = {'x': e.offsetX, 'y': e.offsetY};
+    // });
     servicesBlock.addEventListener('touchstart', (e) => {
-      mouse = {'x': e.offsetX, 'y': e.offsetY};
+      evt = e;
     });
-    servicesBlock.addEventListener('touched', (e) => {
-      mouse = {'x': e.offsetX, 'y': e.offsetY};
+    servicesBlock.addEventListener('touchmove', (e) => {
+      if (evt) {
+        mouse = {'x': e.offsetX, 'y': e.offsetY};
+      }
+    });
+    servicesBlock.addEventListener('touched', () => {
+      evt = null;
     });
   }
 
