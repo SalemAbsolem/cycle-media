@@ -12,6 +12,8 @@
 
   background-color: $black;
 
+  overflow-x: hidden;
+
   &.body--stop-scrolling {
     overflow: hidden;
 

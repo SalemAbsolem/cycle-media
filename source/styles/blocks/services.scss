@@ -1,4 +1,6 @@
 .services {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   min-height: 550px;
@@ -40,7 +42,7 @@
   align-items: center;
   justify-content: center;
   width: fit-content;
-  margin: 5.45vh auto 6.36vh;
+  margin: auto auto 6.36vh;
   padding: 4px 17px;
 
   font-family: $secondary-font;
@@ -60,11 +62,11 @@
   }
 
   @media #{$medium-mobile-only} {
-    margin: 10.73vh auto 4.88vh;
+    margin: auto auto 4.88vh;
   }
 
   @media #{$tablet-only} {
-    margin: 7.91vh auto 4.88vh;
+    margin: auto auto 4.88vh;
     padding: 6px 20px;
 
     font-size: 20px;

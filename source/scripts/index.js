@@ -84,3 +84,6 @@ formValidating();
 
 import {portfolioItemOnFocus} from './smooth-portfolio.js';
 portfolioItemOnFocus(windowHeight);
+
+import {antiGravityCloud} from './cloud.js';
+antiGravityCloud(hoverMedia);
