@@ -107,18 +107,23 @@ const antiGravityCloud = (hover) => {
   } else {
     servicesBlock.addEventListener('touchstart', (e) => {
       evt = e;
+      mouse = {'x': e.offsetX, 'y': e.offsetY};
     });
     servicesBlock.addEventListener('touchmove', (e) => {
       if (evt) {
         mouse = {'x': e.offsetX, 'y': e.offsetY};
       }
     });
-    servicesBlock.addEventListener('touched', () => {
+    servicesBlock.addEventListener('touched', (e) => {
       evt = null;
+      mouse = {'x': e.offsetX, 'y': e.offsetY};
+    });
+    servicesBlock.addEventListener('click', (e) => {
+      mouse = {'x': e.offsetX, 'y': e.offsetY};
     });
   }
 
-  const clouds = document.querySelectorAll('.types__item');
+  const clouds = servicesBlock.querySelectorAll('.types__item');
   for(let i = 0; i < clouds.length; i++) {
     clouds[i].dataset.homex = parseInt(clouds[i].offsetLeft + clouds[i].offsetWidth, 10);
     clouds[i].dataset.homey = parseInt(clouds[i].offsetTop + clouds[i].offsetHeight, 10);
