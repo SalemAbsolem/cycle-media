@@ -6,10 +6,15 @@
     <!-- Заголовок страниц: 50-57 для Google / 65-70 для Яндекс - вместе с пробелами -->
     <title>CYCLE MEDIA | ГЛАВНАЯ</title>
     <!-- Фавиконки -->
-    <!-- <link rel="icon" href="favicon.ico"> -->
-    <!-- <link rel="icon" href="favicons/icon.svg" type="image/svg+xml"> -->
-    <!-- <link rel="apple-touch-icon" href="favicons/apple.png"> -->
-    <!-- <link rel="manifest" href="manifest.webmanifest"> -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="32x32">
+    <link rel="icon" href="favicons/favicon-dark.ico" type="image/x-icon" sizes="32x32" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="favicons/favicon-light.ico" type="image/x-icon" sizes="32x32" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#3c3c3c">
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="msapplication-config" content="favicons/browserconfig.xml">
+    <meta name="theme-color" content="#000000">
     <!-- Описание и ключевые слова -->
     <!-- Длина описания до 150 символов вместе с пробелами -->
     <meta name="description" content="Главная страница меркетингового агентства Cycle Media">
@@ -40,6 +45,8 @@
     <link rel="preload" href="fonts/tt-wellingtons/tt-wellingtons-demibold-italic.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <!-- Таблицы стилей -->
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- Предзагрузка квиза -->
+    <link rel="prefetch" href="quiz.html">
   </head>
   <body class="page__body body">
     <header class="body__header header">
